@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="icon" type="image" href="/images/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="header-container">
+
+      <!-- Section 1: Logo + Text -->
+      <div class="header-left">
+        <div class="logo-section">
+          <a href="index.html"><img src="images/logo.png" alt="Logo" class="logo"/></a>
+          <span class="logo-text">SigmaPi Academy</span>
+        </div>
+      </div>
+
+      <!-- Section 2: Navigation Links -->
+      <div class="header-center">
+        <nav class="nav-links">
+          <ul>
+            <li class="nav-item active">Home</li>
+            <li class="nav-item">Courses</li>
+            <li class="nav-item">Testimonials</li>
+            <li class="nav-item">Contact</li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Section 3: Register Button + Hamburger -->
+      <div class="header-right">
+        <div class="register-section">
+          <button class="register-btn">Register</button>
+          <!-- Inside .register-section -->
+          <div class="hamburger" id="hamburger">&#9776;</div> <!-- hamburger = ☰ -->
+        </div>
+      </div>
+
+    </div>
+
+   <!-- Mobile Overlay Menu -->
+<div class="mobile-overlay hidden">
+  <div class="mobile-menu">
+    <ul>
+      <li class="nav-item active">Home</li>
+      <li class="nav-item">Courses</li>
+      <li class="nav-item">Testimonials</li>
+      <li class="nav-item">Contact</li>
+      <li><button class="register-btn">Register</button></li>
+    </ul>
+  </div>
+</div>
+
+  </header>
+
+</body>
+</html>
