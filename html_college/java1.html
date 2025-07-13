@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Core Java</title>
+  <link rel="icon" type="image" href="/pictures/SigmaPi Logo.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/html/detailedfiles/style.css" />
+  <link rel="stylesheet" href="/stylesheet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+  <!-- Three.js for Vanta -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+</head>
+<style>
+    body{
+background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246));
+/* background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(120, 159, 251)); */
+    }
+  </style>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="header-left">
+        <div class="logo-section">
+          <a href="/index.html"><img src="/pictures/SigmaPi Logo.png" alt="Logo" class="logo"/></a>
+          <span class="logo-text">SigmaPi Academy</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <nav class="nav-links">
+          <ul>
+            <li class="nav-item"><a href="/index.html">Home</a></li>
+            <li class="nav-item dropdown active">
+              <a class="dropbtn">Courses</a>
+              <ul class="dropdown-menu">
+                <div>
+                  <li><a href="/school.html" class="base">School Based</a></li>
+                  <li><a href="/college.html" class="base">College Based</a></li>
+                </div>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="/testimonials.html">Testimonials</a></li>
+            <li class="nav-item"><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger" id="hamburger">&#9776;</div> 
+      </div>
+    </div>
+
+
+    <!-- Mobile Overlay Menu -->
+    <div class="mobile-overlay hidden">
+      <div class="mobile-menu">
+        <ul>
+          <li class="nav-item">Home</li>
+          <li class="nav-item active">Courses</li>
+          <li class="nav-item">Testimonials</li>
+          <li class="nav-item">Contact</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <br><br>
+<div style="text-align: center;">
+  <span class="subject">JAVA PROGRAMMING – SYLLABUS</span>
+</div>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Unit</th>
+        <th>Topics</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Unit 1: Introduction to Java</td>
+        <td>Introduction to Java Language</td>
+      </tr>
+      <tr>
+        <td>Unit 2: Core Programming Concepts</td>
+        <td>
+          Fundamental Data Types<br>
+          Decisions<br>
+          Loops<br>
+          Methods
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 3: Data Structures</td>
+        <td>
+          Arrays and Array Lists<br>
+          The Java Collections Framework<br>
+          Sorting and Searching
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 4: Input/Output & Error Handling</td>
+        <td>
+          Input/Output<br>
+          Exception Handling
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 5: Object-Oriented Programming</td>
+        <td>
+          Objects and Classes<br>
+          Inheritance and Interfaces<br>
+          Object-Oriented Design
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 6: Advanced Java Concepts</td>
+        <td>
+          Multithreading<br>
+          Recursion
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 7: Graphical Interfaces</td>
+        <td>
+          Graphical User Interfaces<br>
+          Advanced Graphical User Interfaces
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 8: Tools & IDEs</td>
+        <td>Introduction to IDE like Eclipse and NetBeans</td>
+      </tr>
+      <tr>
+        <td>Unit 9: JavaFX</td>
+        <td>
+          Introduction to JavaFX<br>
+          Colors and Shapes<br>
+          Graphics, Audio, and MouseEvents
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 10: Final Project</td>
+        <td>Developing a Java-based animation, application or game</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row footer-content">
+        <div class="footer-column">
+          <div class="footer-link">
+            <h2 style="text-align: center;">Miscellaneous</h2>
+            <a style="margin-left: 60px;" href="#">Terms & Conditions</a>
+            <a style="margin-left: 60px;" href="./Misc/privacy.html">Privacy Policy</a>
+            <a style="margin-left: 60px;" href="tel:+91-988-318-3128">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-link">
+            <h2 style="text-align: center;">Social Media</h2>
+            <a style="margin-left: 75px;" target="_blank" href="https://www.facebook.com/Sigma-Pi-Academy-113496663694837">
+              <i class="fa-brands fa-facebook"></i> Facebook
+            </a>
+            <a style="margin-left: 75px;" target="_blank" href="https://api.whatsapp.com/send?phone=919883183128">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a style="margin-left: 75px;" target="_blank" href="https://www.instagram.com/bluejteacher/">
+              <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a style="margin-left: 75px;" target="_blank" href="https://www.youtube.com/channel/UCfB67QqVUDy8GE00Ly6gCQQ/featured">
+              <i class="fa-brands fa-youtube"></i> YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container copyright">
+      <p>&copy; <a href="#">SigmaPi Academy</a> All Rights Reserved</p>
+    </div>
+  </footer>
+  </body>
+</html>

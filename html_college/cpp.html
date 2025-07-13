@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ Programming</title>
+  <link rel="icon" type="image" href="/pictures/SigmaPi Logo.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/html/detailedfiles/style.css" />
+  <link rel="stylesheet" href="/stylesheet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+  <!-- Three.js for Vanta -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+</head>
+<style>
+    body{
+background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246));
+/* background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(120, 159, 251)); */
+    }
+  </style>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="header-left">
+        <div class="logo-section">
+          <a href="/index.html"><img src="/pictures/SigmaPi Logo.png" alt="Logo" class="logo"/></a>
+          <span class="logo-text">SigmaPi Academy</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <nav class="nav-links">
+          <ul>
+            <li class="nav-item"><a href="/index.html">Home</a></li>
+            <li class="nav-item dropdown active">
+              <a class="dropbtn">Courses</a>
+              <ul class="dropdown-menu">
+                <div>
+                  <li><a href="/school.html" class="base">School Based</a></li>
+                  <li><a href="/college.html" class="base">College Based</a></li>
+                </div>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="/testimonials.html">Testimonials</a></li>
+            <li class="nav-item"><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger" id="hamburger">&#9776;</div> 
+      </div>
+    </div>
+
+
+    <!-- Mobile Overlay Menu -->
+    <div class="mobile-overlay hidden">
+      <div class="mobile-menu">
+        <ul>
+          <li class="nav-item">Home</li>
+          <li class="nav-item active">Courses</li>
+          <li class="nav-item">Testimonials</li>
+          <li class="nav-item">Contact</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <br><br>
+<div style="text-align: center;">
+  <span class="subject">C++ PROGRAMMING – SYLLABUS</span>
+</div>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Unit</th>
+        <th>Topics</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Unit 1: Fundamentals</td>
+        <td>
+          ANSI C++ Fundamentals<br>
+          Block Structure of C and C++ Programs<br>
+          Fundamentals of Syntax<br>
+          Built-in Data Types<br>
+          The Preprocessor and Macros
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 2: Data Types & Scope</td>
+        <td>
+          Data Types and Qualifiers<br>
+          Constants and String Literals<br>
+          Static vs. Automatic Storage<br>
+          Scope and Variables<br>
+          Initialization Rules
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 3: Operators and Expressions</td>
+        <td>
+          Arithmetic, Logical, and Bit Operators<br>
+          Precedence and Associativity<br>
+          Assignment<br>
+          Type Conversion Rules<br>
+          Type Casting
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 4: Flow Control</td>
+        <td>
+          if, switch<br>
+          while, do, for loops<br>
+          Programming Style
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 5: Pointers</td>
+        <td>
+          Declaring and Using Pointers<br>
+          Pointer Arithmetic<br>
+          Dereferencing<br>
+          Pointers vs. Arrays
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 6: Moving from C to C++</td>
+        <td>
+          Compiler Directives<br>
+          Stream Console I/O<br>
+          Explicit Operators<br>
+          Standard Libraries<br>
+          Data Control Capabilities
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 7: Data Handling</td>
+        <td>
+          New Declaration Features<br>
+          Constant & Volatile Storage<br>
+          Enumerated Types<br>
+          Pointers to Constant Storage<br>
+          References and Constant References<br>
+          Global Data
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 8: Functions</td>
+        <td>
+          Function Prototypes<br>
+          Function Overloading<br>
+          Name Resolution<br>
+          Call by Value and Reference<br>
+          Inline Functions<br>
+          Default and Constant Arguments
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 9: Strings</td>
+        <td>
+          Character Strings<br>
+          The String Class<br>
+          Operators and Member Functions
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 10: Objects and Classes</td>
+        <td>
+          Creating and Using Objects<br>
+          Constructors & Destructors<br>
+          Scope and Object Methods<br>
+          Constant Methods<br>
+          Containment
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 11: Memory Management</td>
+        <td>
+          Dynamic Memory Allocation (new/delete)<br>
+          Memory Allocation Errors<br>
+          Static, Heap, and Automatic Memory
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 12: Object Creation Control</td>
+        <td>
+          Copy Constructors<br>
+          Conversion Constructors<br>
+          Object Copying
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 13: Inheritance</td>
+        <td>
+          Reuse, Composition vs Inheritance<br>
+          Public/Protected/Private Inheritance<br>
+          Constructors and Initialization<br>
+          Inherited Copy Constructors<br>
+          Destructors and Maintenance
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 14: I/O Streaming</td>
+        <td>
+          iostream Library<br>
+          Stream Manipulators<br>
+          Formatted I/O<br>
+          File Streams<br>
+          Overloading Stream Operators
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 15: Object-Oriented Programming</td>
+        <td>
+          Object Concepts and Definitions<br>
+          Information Hiding and Encapsulation<br>
+          Classes and Instances<br>
+          Polymorphism and Overloading
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 16: Templates</td>
+        <td>
+          Purpose of Template Classes<br>
+          Template Inheritance<br>
+          Container Classes<br>
+          STL and Vector Class
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 17: Exceptions</td>
+        <td>
+          Types and Handling of Exceptions<br>
+          Triggering Exceptions<br>
+          Memory Error Handling
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 18: Project Structure & Integration</td>
+        <td>
+          Organizing C++ Source Files<br>
+          Integrating C with C++ Projects
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 19: Reliability</td>
+        <td>
+          Function Prototypes<br>
+          Type Checking<br>
+          Constant Types<br>
+          Access Control
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 20: Polymorphism</td>
+        <td>
+          Calling Overridden Methods<br>
+          Virtual Methods and Destructors<br>
+          Abstract Base Classes<br>
+          Dynamic Binding
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 21: Multiple Inheritance</td>
+        <td>
+          Virtual Inheritance<br>
+          Base Class Ambiguities<br>
+          Virtual Base Classes
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 22: Classes and Declarations</td>
+        <td>
+          Class Structure and Syntax<br>
+          Member Functions<br>
+          Inline & Friend Functions<br>
+          Static and Friend Classes
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 23: Operator Overloading</td>
+        <td>
+          Member vs. Non-Member Operators<br>
+          Assignment and Equality Operators<br>
+          Operator Precedence<br>
+          The this Pointer
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 24: Standard Template Library (STL)</td>
+        <td>
+          STL Containers and Algorithms<br>
+          Vector Class<br>
+          Use of Libraries
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row footer-content">
+        <div class="footer-column">
+          <div class="footer-link">
+            <h2 style="text-align: center;">Miscellaneous</h2>
+            <a style="margin-left: 60px;" href="#">Terms & Conditions</a>
+            <a style="margin-left: 60px;" href="./Misc/privacy.html">Privacy Policy</a>
+            <a style="margin-left: 60px;" href="tel:+91-988-318-3128">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-link">
+            <h2 style="text-align: center;">Social Media</h2>
+            <a style="margin-left: 75px;" target="_blank" href="https://www.facebook.com/Sigma-Pi-Academy-113496663694837">
+              <i class="fa-brands fa-facebook"></i> Facebook
+            </a>
+            <a style="margin-left: 75px;" target="_blank" href="https://api.whatsapp.com/send?phone=919883183128">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a style="margin-left: 75px;" target="_blank" href="https://www.instagram.com/bluejteacher/">
+              <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a style="margin-left: 75px;" target="_blank" href="https://www.youtube.com/channel/UCfB67QqVUDy8GE00Ly6gCQQ/featured">
+              <i class="fa-brands fa-youtube"></i> YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container copyright">
+      <p>&copy; <a href="#">SigmaPi Academy</a> All Rights Reserved</p>
+    </div>
+  </footer>
+  </body>
+</html>

@@ -26,7 +26,15 @@
         <nav class="nav-links">
           <ul>
             <li class="nav-item active"><a href="index.html">Home</a></li>
-            <li class="nav-item"><a href="courses.html">Courses</a></li>
+            <li class="nav-item dropdown">
+              <a style="cursor:default;" class="dropbtn">Courses</a>
+              <ul class="dropdown-menu">
+                <div>
+                  <li><a href="school.html" class="base">School Based</a></li>
+                <li><a href="college.html" class="base">College Based</a></li>
+                </div>
+              </ul>
+            </li>
             <li class="nav-item"><a href="testimonials.html">Testimonials</a></li>
             <li class="nav-item"><a href="contact.html">Contact</a></li>
           </ul>
@@ -62,6 +70,7 @@
     </div> -->
   </div>
 </div>
+
 <section class="course-section">
   <h2><span>Start Learning</span> <span class="highlight">Keep Growing</span></h2>
   <div class="carousel-wrapper">
@@ -218,6 +227,21 @@ VANTA.GLOBE({
   size: 1.0
 });
 </script>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const overlay = document.querySelector('.mobile-overlay');
+
+  hamburger.addEventListener('click', () => {
+    overlay.classList.toggle('hidden');
+    hamburger.classList.toggle('active');
+  });
+
+  document.getElementById('modalOverlay')?.addEventListener('click', () => {
+    document.getElementById('registerModal')?.classList.remove('show');
+  });
+</script>
+
 
 </body>
 </html>

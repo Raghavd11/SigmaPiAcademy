@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    
+#grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+    .contact-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .square {
+  width: 20px;
+  height: 20px;
+  fill: #e6f0ff;
+  transition: fill 0.3s ease;
+  shape-rendering: crispEdges;
+    }
+
+  </style>
+
+</head>
+<body class="bg-blue-50 text-gray-900 relative">
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Section 1: Logo + Text -->
+      <div class="header-left">
+        <div class="logo-section">
+          <a href="index.html"><img src="pictures/SigmaPi Logo.png" alt="Logo" class="logo"/></a>
+          <span class="logo-text">SigmaPi Academy</span>
+        </div>
+      </div>
+
+      <!-- Section 2: Navigation Links -->
+      <div class="header-right">
+        <nav class="nav-links">
+          <ul>
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a style="cursor:default;" class="dropbtn">Courses</a>
+              <ul class="dropdown-menu">
+                <div>
+                  <li><a href="school.html" class="base">School Based</a></li>
+                <li><a href="college.html" class="base">College Based</a></li>
+                </div>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="testimonials.html">Testimonials</a></li>
+            <li class="nav-item active"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger" id="hamburger">&#9776;</div> 
+      </div>
+    </div>
+   <!-- Mobile Overlay Menu -->
+<div class="mobile-overlay hidden">
+  <div class="mobile-menu">
+    <ul>
+      <li class="nav-item">Home</li>
+      <li class="nav-item">Courses</li>
+      <li class="nav-item">Testimonials</li>
+      <li class="nav-item active">Contact</li>
+    </ul>
+  </div>
+</div>
+</header>
+
+<!-- Light Blue SVG Background -->
+<svg id="grid-bg"></svg>
+<!-- Contact Section -->
+<section class="flex items-center justify-center pt-10 pb-20 min-h-[80vh]">
+  <div class="contact-content max-w-4xl w-full bg-white rounded-3xl shadow-xl p-10 backdrop-blur-lg bg-opacity-90 text-center">
+    <h2 class="text-4xl font-bold text-blue-500 mb-3">Let's Connect!</h2>
+    <p class="text-lg mb-10 text-gray-700">Get in touch for queries, collaborations, or just to say hi.</p>
+    <!-- Add your contact options here -->
+    <div class="grid gap-5 grid-cols-1 md:grid-cols-3">
+    <!-- Call Us -->
+<a href="tel:+919883183128" class="no-underline hover:no-underline">
+  <div class="group bg-white text-black border border-gray-300 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all p-5 rounded-2xl shadow-md flex items-center gap-4">
+    <i class="fas fa-phone-alt text-black text-xl transition-colors group-hover:text-white"></i>
+    <span class="font-medium text-lg transition-colors group-hover:text-white">Call Us</span>
+  </div>
+</a>
+
+<!-- Gmail -->
+<a href="mailto:info@sigmapi-academy.com" class="no-underline hover:no-underline">
+  <div class="group bg-white text-black border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 transition-all p-5 rounded-2xl shadow-md flex items-center gap-4">
+    <i class="fas fa-envelope text-black text-xl transition-colors group-hover:text-white"></i>
+    <span class="font-medium text-lg transition-colors group-hover:text-white">Email</span>
+  </div>
+</a>
+
+<!-- GitHub -->
+<a href="https://github.com/kumarsatyendermishra" target="_blank" class="no-underline hover:no-underline">
+  <div class="group bg-white text-black border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all p-5 rounded-2xl shadow-md flex items-center gap-4">
+    <i class="fab fa-github text-black text-xl transition-colors group-hover:text-white"></i>
+    <span class="font-medium text-lg transition-colors group-hover:text-white">GitHub</span>
+  </div>
+</a>
+
+<!-- LinkedIn -->
+<a href="https://www.linkedin.com/in/satyender-mishra-75963799/" target="_blank" class="no-underline hover:no-underline">
+  <div class="group bg-white text-black border border-gray-300 hover:bg-blue-700 hover:text-white hover:border-blue-700 transition-all p-5 rounded-2xl shadow-md flex items-center gap-4">
+    <i class="fab fa-linkedin-in text-black text-xl transition-colors group-hover:text-white"></i>
+    <span class="font-medium text-lg transition-colors group-hover:text-white">LinkedIn</span>
+  </div>
+</a>
+
+<!-- WhatsApp -->
+<a href="https://api.whatsapp.com/send?phone=919883183128" target="_blank" class="no-underline hover:no-underline">
+  <div class="group bg-white text-black border border-gray-300 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all p-5 rounded-2xl shadow-md flex items-center gap-4">
+    <i class="fab fa-whatsapp text-black text-xl transition-colors group-hover:text-white"></i>
+    <span class="font-medium text-lg transition-colors group-hover:text-white">WhatsApp</span>
+  </div>
+</a>
+
+<!-- Microsoft Teams -->
+<a href="https://teams.microsoft.com/l/chat/0/0?users=youremail@domain.com" target="_blank" class="no-underline hover:no-underline">
+  <div class="group bg-white text-black border border-gray-300 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-all p-5 rounded-2xl shadow-md flex items-center gap-4">
+    <i class="fab fa-microsoft text-black text-xl transition-colors group-hover:text-white"></i>
+    <span class="font-medium text-lg transition-colors group-hover:text-white">Teams</span>
+  </div>
+</a>
+
+    </div>
+  </div>
+</section>
+
+<footer style="margin-top: 50px;" class="footer">
+  <div class="container">
+    <div style="margin-left: 125px;" class="row footer-content">
+      <!-- Column 1: Miscellaneous Links -->
+      <div class="footer-column">
+        <div class="footer-link">
+          <h2 style="text-align: center;">Miscellaneous</h2>
+          <a style="margin-left: 60px;" href="#">Terms & Conditions</a>
+          <a style="margin-left: 60px;" href="./Misc/privacy.html">Privacy Policy</a>
+          <a style="margin-left: 60px;" href="tel:+91-988-318-3128">Contact</a>
+        </div>
+      </div>
+
+      <!-- Column 2: Social Media Links -->
+      <div class="footer-column">
+        <div class="footer-link">
+          <h2 style="text-align: center;">Social Media</h2>
+          <a style="margin-left: 75px;" target="_blank" href="https://www.facebook.com/Sigma-Pi-Academy-113496663694837">
+            <i class="fa-brands fa-facebook"></i> Facebook
+          </a>
+          <a style="margin-left: 75px;" target="_blank" href="https://api.whatsapp.com/send?phone=919883183128">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+          <a style="margin-left: 75px;" target="_blank" href="https://www.instagram.com/bluejteacher/">
+            <i class="fa-brands fa-instagram"></i> Instagram
+          </a>
+          <a style="margin-left: 75px;" target="_blank" href="https://www.youtube.com/channel/UCfB67QqVUDy8GE00Ly6gCQQ/featured">
+            <i class="fa-brands fa-youtube"></i> YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-left: 50px;" class="container copyright">
+    <p>&copy; <a href="#">SigmaPi Academy</a>All Rights Reserved</p>
+  </div>
+</footer>
+
+
+<!-- Grid Animation Script -->
+<script>
+  const svg = document.getElementById('grid-bg');
+  const cols = Math.floor(window.innerWidth / 22);
+  const rows = Math.floor(window.innerHeight / 22);
+  const gridSize = 23;
+  const squares = [];
+svg.setAttribute('width', Math.ceil(window.innerWidth + gridSize));
+svg.setAttribute('height', Math.ceil(window.innerHeight + gridSize));
+
+  for (let y = 0; y < rows; y++) {
+    for (let x = 0; x < cols; x++) {
+      let rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      rect.setAttribute("x", x * gridSize);
+      rect.setAttribute("y", y * gridSize);
+      rect.setAttribute("width", 20);
+      rect.setAttribute("height", 20);
+      rect.setAttribute("class", "square");
+rect.setAttribute("stroke", "none");
+      rect.style.fill = '#e6f0ff'; // default pale blue
+      svg.appendChild(rect);
+      squares.push(rect);
+    }
+  }
+
+  document.addEventListener('mousemove', (e) => {
+  const cursorX = e.clientX;
+  const cursorY = e.clientY;
+
+  squares.forEach((sq) => {
+    const x = parseFloat(sq.getAttribute('x')) + 10; // center of square
+    const y = parseFloat(sq.getAttribute('y')) + 10;
+    const dist = Math.hypot(cursorX - x, cursorY - y);
+
+    if (dist < 150) {
+      const intensity = 1 - dist / 150;
+      const lightness = 95 - intensity * 20;
+      sq.style.fill = `hsl(210, 100%, ${lightness}%)`;
+    } else {
+      sq.style.fill = '#e6f0ff';
+    }
+  });
+});
+
+
+  window.addEventListener('resize', () => location.reload());
+</script>
+
+
+</body>
+</html>

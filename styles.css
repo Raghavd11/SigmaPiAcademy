@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
   color: black;
@@ -24,17 +25,95 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  /* font-family: UniversalSans-500, Arial, sans-serif; */
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
-  background-color: #f8fafc;
+  background-color: #f5f6f7;
+}
+
+/* General nav styles */
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-item a{
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+} 
+
+/* Hover style only when directly hovering the <a> */
+.nav-item a:hover {
+  background-color: #e7e7e7;
+  color: #000;
+}
+
+/* Reset hover style when hovering on the dropdown menu */
+.nav-item.dropdown:hover .dropbtn {
+  background-color: transparent;
+  color: #222;
+}
+
+/* But re-apply hover when directly over the link */
+.nav-item.dropdown .dropbtn:hover {
+  background-color: #e7e7e7;
+  color: #000;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 175%;
+  left: -0.5rem;
+  background: #fff;
+  padding: 10px 0;
+  border-radius: 12px;
+  min-width: 150px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+/* Show dropdown */
+.nav-item.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown items */
+.dropdown-menu li a {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: background-color 0.2s, color 0.2s;
+}
+/* Dropdown item hover */
+.dropdown-menu li a:hover {
+  border: none;
+  background-color: #1968b7;
+  color: #fff;
 }
 
 .main-header {
   position: relative;
-  width: 100%;
-  background-color: #f5f6f7;
   /* background-color: #f8fafc;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
   z-index: 1000;
@@ -43,7 +122,7 @@ body {
 /* Updated header-container to center middle section properly */
 .header-container {
   display: grid;
-  grid-template-columns: 1fr  1fr;  /* left, right columns */
+  grid-template-columns: 1fr 1fr;  /* left, right columns */
   align-items: center;
   max-width: 100%;
   padding: 35px;
@@ -64,7 +143,6 @@ body {
   align-items: right;
   justify-content: right;
 }
-
 
 /* Logo section */
 .logo-section {
@@ -101,13 +179,10 @@ body {
   font-size: 1.1rem;
   position: relative;
   cursor: pointer;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
   transition: all 0.3s ease;
-  border-radius: 10px;
-}
-
-.nav-item:hover {
-  background-color: #d5d4d462;
   border-radius: 10px;
 }
 
@@ -118,8 +193,9 @@ body {
   height: 2px;
   background: var(--primary-color);
   left: 0;
-  bottom: -15px;
+  bottom: -25px;
 }
+
 /* Modal Base */
 .custom-modal {
   display: none;
@@ -330,12 +406,11 @@ body {
 
 .hero {
   padding: 40px;
-  
 }
 
 .hero-container {
   max-width: 1200px;
-  margin: 200px auto;
+  margin: 190px auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -670,70 +745,6 @@ body {
 }
 
 
-.quote-card {
-  margin-left: 92px;
-  margin-right: 92px;
-    background: #fff;
-    color: #222222;
-    padding: 30px;
-    padding-left: 60px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 4px rgba(34, 34, 34, 0.12);
-    position: relative;
-    overflow: hidden;
-    min-height: 120px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.quote-card p {
-    font-size: 25px;
-    font-weight: 500;
-    line-height: 1.5;
-    margin-left: 90px;
-    max-width: 80%;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.quote-card cite {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    margin-left: -50px;
-    margin-top: 8px;
-    display: block;
-    font-weight: 300;
-    opacity: 0.8;
-}
-
-.quote-card:before {
-    font-family: Georgia, serif;
-    content: "“";
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 5em;
-    color: rgba(238, 238, 238, 0.8);
-    font-weight: normal;
-}
-
-.quote-card:after {
-    font-family: Georgia, serif;
-    content: "”";
-    position: absolute;
-    bottom: -110px;
-    line-height: 100px;
-    right: -5px;
-    font-size: 25em;
-    color: rgba(238, 238, 238, 0.8);
-    font-weight: normal;
-}
-
-@media (max-width: 640px) {
-    .quote-card:after {
-        font-size: 22em;
-        right: -25px;
-    }
-}
 
 .bd-placeholder-img {
     font-size: 1.125rem;
@@ -749,6 +760,63 @@ body {
         font-size: 3.5rem;
     }
 }
+
+/* Ultra-small screen adjustments */
+@media (max-width: 480px) {
+  .hero-container {
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 30px;
+    margin: 100px auto;
+  }
+
+  .hero-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .course-card img {
+    height: 140px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 30px;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-video {
+    width: 100%;
+  }
+
+  .footer .footer-content {
+    padding: 0 10px;
+    gap: 20px;
+  }
+
+  .footer .footer-column {
+    width: 100%;
+    text-align: center;
+  }
+
+  .mobile-menu ul {
+    padding: 20px 10px;
+    font-size: 1.1rem;
+  }
+}
+
 
 
 

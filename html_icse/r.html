@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robotics</title>
+  <link rel="stylesheet" href="/stylesheet.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/html/detailedfiles/style.css" />
+  <link rel="icon" type="image" href="/pictures/SigmaPi Logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    body{
+background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246));
+/* background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(120, 159, 251)); */
+    }
+  </style>
+<body>
+<header class="main-header">
+  <div class="header-container">
+    <div class="header-left">
+      <div class="logo-section">
+        <a href="/index.html"><img src="/pictures/SigmaPi Logo.png" alt="Logo" class="logo"/></a>
+        <span class="logo-text">SigmaPi Academy</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <nav class="nav-links">
+        <ul>
+          <li class="nav-item"><a href="/index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="dropbtn">Class IX-X</a>
+            <ul class="dropdown-menu">
+              <div>
+                <li><a href="ca.html" class="base">Computer Application</a></li>
+                <li><a href="air.html" class="base">AI & Robotics</a></li>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="dropbtn">Class XI-XII</a>
+            <ul class="dropdown-menu">
+              <div>
+                <li><a href="cs.html" class="base">Computer Science</a></li>
+                <li><a href="ai.html" class="base">Artificial Intelligence</a></li>
+                <li><a href="r.html" class="base">Robotics</a></li>
+              </div>
+            </ul>
+          </li>
+          <div class="hero-buttons">
+            <button style="margin-left: 20px;" class="register" id="openModal">Register</button>
+          </div>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+  </div>
+</header>
+<br><br>
+<div style="text-align: center;">
+  <span class="subject">Robotics – CLASS XI</span>
+</div>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Unit</th>
+        <th>Topics</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Unit 1: Introduction to Robotics</td>
+        <td>
+          (i) What is a Robot? Autonomous and semi-autonomous systems using sensors and AI.<br>
+          (ii) New Age Robotics Systems: AI/ML in smart manufacturing, healthcare, autonomous vehicles.<br>
+          (iii) Components of Robots: System design, CAD modeling, sensors, actuators, control units.<br>
+          (iv) Physics & Mathematics in Robotics: Motion, control, algorithms, matrix operations, vector spaces.<br>
+          (v) Project Management: Planning, execution, monitoring of robotic projects for quality and efficiency.
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 2: Mechanical System</td>
+        <td>
+          (i) Frames & Reference Frames: Fixed and moving frames for positioning and orientation.<br>
+          (ii) Degrees of Freedom: 3D modeling using tools like TinkerCAD.<br>
+          (iii) Planar Mechanisms: 2D mechanical systems with real-life applications.<br>
+          (iv) Spatial Mechanisms: 3D systems allowing multi-directional motion.<br>
+          (v) Robot Kinematics: Forward kinematics of planar configurations (2R, RP).<br>
+          (vi) Robot Components: Materials (MDF, acrylic, metal), wheels (standard, Mecanum, Omni).<br>
+          (vii) Coordinate Systems: Cartesian, polar, and cylindrical for robot motion.<br>
+          (viii) Specification of Robots: Resolution, accuracy, repeatability; current trends and innovations.
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 3: Computing Systems</td>
+        <td>
+          (i) Boolean Operators: AND, OR, NOT in robotic decision-making.<br>
+          (ii) Microcontroller / SBC Architecture: Block diagrams and basic structures.<br>
+          (iii) Programming Fundamentals: Algorithms, flowcharts, pseudocode, embedded C, interrupts, timers.<br>
+          (iv) Debugging and Testing: Ensuring efficient and correct program execution.
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 4: Electrical and Control Systems</td>
+        <td>
+          (i) Motors & Sensors: DC, Servo motors; IR, ultrasonic, LIDAR, touch, gyroscope, accelerometer sensors.<br>
+          (ii) Batteries: Lithium-ion, lead-acid – usage, advantages, drawbacks.<br>
+          (iii) Communication Protocols: UART, I2C, SPI, CAN – characteristics, reliability, performance.<br>
+          (iv) Power Requirements: Estimation based on components like sensors, motors, controllers.<br>
+          (v) Control Systems: Basics ensuring accurate, efficient, and safe robotic performance.
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 5: Applications of Robotic Systems</td>
+        <td>
+          (i) Manipulators: Math concepts and control strategies in industrial automation.<br>
+          (ii) Mobile Robots: Design principles and sensors for autonomous robots in logistics, rescue, transport.<br>
+          (iii) Drones: Aerial robotics, sensor payloads, regulation, and real-world applications.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div style="text-align: center;">
+  <span class="subject">Robotics – CLASS XII</span>
+</div>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Unit</th>
+        <th>Topics</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Unit 1: Introduction to Robotics</td>
+        <td>
+          (i) Design and Selection Parameters: Fundamentals of robot design for different applications.<br>
+          (ii) Introduction to ROS and Gazebo: Basics of Robot Operating System and Gazebo simulator.<br>
+          (iii) Robotics Ethics: Accountability, privacy, employment impact, HRI, autonomy, and defense concerns.
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 2: Robotics in Healthcare</td>
+        <td>
+          (i) Introduction: Robotics in surgeries, diagnostics, patient care, and rehabilitation.<br>
+          (ii) Types of Robots: Surgical, Assistance, Diagnostic, Rehabilitation Robots.<br>
+          (iii) Applications:<br>
+          – da Vinci Surgical System: Minimally invasive surgery with micro-movements.<br>
+          – Ultrasound Robotic System: Automated and consistent imaging.<br>
+          – Exoskeletons: Wearable robotic limbs for mobility and strength.
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 3: Robotics in Agriculture</td>
+        <td>
+          (i) Introduction: Use of robots and AI in sustainable farming and productivity enhancement.<br>
+          (ii) Types of Robots: Seeding & Spraying, Ground Mobile, Monitoring & Sensing Robots.<br>
+          (iii) Applications:<br>
+          – Seeding & Spraying Robot: GPS-guided precision farming.<br>
+          – Ground Mobile Robot: Data collection and autonomous field navigation.<br>
+          – Monitoring Robot: Early pest and moisture detection for better yield.
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 4: Smart Manufacturing & Industry 4.0/5.0</td>
+        <td>
+          (i) Introduction: Integration of AI, automation, and data for smart factories.<br>
+          (ii) Types of Robots: Industrial Arms, Cobots, AGVs, 3D Printers, Welding Robots.<br>
+          (iii) Applications:<br>
+          – Manipulator: Multi-joint arms for precision tasks.<br>
+          – Security Robot: Real-time surveillance using AI.<br>
+          – Cobots: Safe and collaborative human-robot workspaces.
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 5: Space Robotics</td>
+        <td>
+          (i) Introduction: Use of robotics in space exploration and satellite support missions.<br>
+          (ii) Types of Robots: Planetary Rovers, Probes, Landers, Station Robotics.<br>
+          (iii) Applications:<br>
+          – Mars Rover: AI-driven navigation and sample collection.<br>
+          – Chandrayaan-2: Lunar surface exploration using Vikram and Pragyan.<br>
+          – Gaganyaan–Vyommitra: Humanoid assisting astronauts with safety and precision.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- FOOTER -->
+<br><br>
+<footer class="footer">
+  <div class="container">
+    <div style="margin-left: 125px;" class="row footer-content">
+      <div class="footer-column">
+        <div class="footer-link">
+          <h2 style="text-align: center;">Miscellaneous</h2>
+          <a style="margin-left: 60px;" href="#">Terms & Conditions</a>
+          <a style="margin-left: 60px;" href="./Misc/privacy.html">Privacy Policy</a>
+          <a style="margin-left: 60px;" href="tel:+91-988-318-3128">Contact</a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <div class="footer-link">
+          <h2 style="text-align: center;">Social Media</h2>
+          <a style="margin-left: 75px;" target="_blank" href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+          <a style="margin-left: 75px;" target="_blank" href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a style="margin-left: 75px;" target="_blank" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a style="margin-left: 75px;" target="_blank" href="#"><i class="fa-brands fa-youtube"></i> YouTube</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-left: 50px;" class="container copyright">
+    <p>&copy; <a href="#">SigmaPi Academy</a> All Rights Reserved</p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="custom-modal" id="registerModal">
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <img src="pictures/SigmaPi Logo.png" width="30px" height="30px" alt="Logo">
+      <span class="close-button" id="closeModal">&times;</span>
+    </div>
+    <div class="modal-body">
+      <iframe style="width: 100%; height: 70vh; border: none;" src="https://docs.google.com/forms/d/e/1FAIpQLSe_km_Qpf4Vh0bY7QELvZ0QbQHFLHU4Y3b3SQg3X26aIQXtNw/viewform?embedded=true">Loading…</iframe>
+    </div>
+  </div>
+</div>
+
+<script src="/script.js"></script>
+</body>
+</html>

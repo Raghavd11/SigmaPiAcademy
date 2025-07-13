@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RDBMS</title>
+  <link rel="icon" type="image" href="/pictures/SigmaPi Logo.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/html/detailedfiles/style.css" />
+  <link rel="stylesheet" href="/stylesheet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+  <!-- Three.js for Vanta -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+</head>
+<style>
+    body{
+background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246));
+/* background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(120, 159, 251)); */
+    }
+  </style>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="header-left">
+        <div class="logo-section">
+          <a href="/index.html"><img src="/pictures/SigmaPi Logo.png" alt="Logo" class="logo"/></a>
+          <span class="logo-text">SigmaPi Academy</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <nav class="nav-links">
+          <ul>
+            <li class="nav-item"><a href="/index.html">Home</a></li>
+            <li class="nav-item dropdown active">
+              <a class="dropbtn">Courses</a>
+              <ul class="dropdown-menu">
+                <div>
+                  <li><a href="/school.html" class="base">School Based</a></li>
+                  <li><a href="/college.html" class="base">College Based</a></li>
+                </div>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="/testimonials.html">Testimonials</a></li>
+            <li class="nav-item"><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger" id="hamburger">&#9776;</div> 
+      </div>
+    </div>
+
+
+    <!-- Mobile Overlay Menu -->
+    <div class="mobile-overlay hidden">
+      <div class="mobile-menu">
+        <ul>
+          <li class="nav-item">Home</li>
+          <li class="nav-item active">Courses</li>
+          <li class="nav-item">Testimonials</li>
+          <li class="nav-item">Contact</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <br><br>
+<div style="text-align: center;">
+  <span class="subject">RDBMS – SYLLABUS</span>
+</div>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Unit</th>
+        <th>Topics</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Unit 1: Introduction</td>
+        <td>
+          Database Systems<br>
+          RDBMS Definition<br>
+          Data Models<br>
+          3-Schema Architecture<br>
+          Challenges in Building RDBMS<br>
+          Components of an RDBMS
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 2: Relational Data Model</td>
+        <td>
+          Concept of Relations and Their Characteristics<br>
+          Schema vs. Instance<br>
+          Integrity Constraints<br>
+          E/R Model and Extended E/R Model<br>
+          Converting E/R and Extended E/R to Relational Schema
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 3: Relational Query Language</td>
+        <td>
+          Relational Algebra<br>
+          Tuple Relational Calculus<br>
+          Domain Relational Calculus<br>
+          Introduction to SQL<br>
+          Data Definition in SQL<br>
+          Table and Constraint Definitions<br>
+          Data Manipulation in SQL<br>
+          Nested Queries<br>
+          Aggregation Concepts
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 4: Relational Database Design</td>
+        <td>
+          Functional Dependencies and Normal Forms<br>
+          Armstrong’s Axioms for FDs<br>
+          Closure of FD Sets<br>
+          Minimal Covers<br>
+          Decomposition to 3NF and BCNF<br>
+          Algorithms for Normalization<br>
+          Multi-Valued Dependencies and 4NF
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 5: Transaction Processing</td>
+        <td>
+          Concepts of Transaction Processing<br>
+          ACID Properties<br>
+          Concurrency Control<br>
+          Locking-Based Protocols<br>
+          Recovery and Logging Methods
+        </td>
+      </tr>
+      <tr>
+        <td>Unit 6: Data Storage and Indexing</td>
+        <td>
+          File Organizations<br>
+          Primary and Secondary Index Structures<br>
+          Hash-Based Indexing<br>
+          Dynamic Hashing Techniques<br>
+          Multi-Level Indexes<br>
+          B-Tree and B+ Tree Indexing
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row footer-content">
+        <div class="footer-column">
+          <div class="footer-link">
+            <h2 style="text-align: center;">Miscellaneous</h2>
+            <a style="margin-left: 60px;" href="#">Terms & Conditions</a>
+            <a style="margin-left: 60px;" href="./Misc/privacy.html">Privacy Policy</a>
+            <a style="margin-left: 60px;" href="tel:+91-988-318-3128">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-link">
+            <h2 style="text-align: center;">Social Media</h2>
+            <a style="margin-left: 75px;" target="_blank" href="https://www.facebook.com/Sigma-Pi-Academy-113496663694837">
+              <i class="fa-brands fa-facebook"></i> Facebook
+            </a>
+            <a style="margin-left: 75px;" target="_blank" href="https://api.whatsapp.com/send?phone=919883183128">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a style="margin-left: 75px;" target="_blank" href="https://www.instagram.com/bluejteacher/">
+              <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a style="margin-left: 75px;" target="_blank" href="https://www.youtube.com/channel/UCfB67QqVUDy8GE00Ly6gCQQ/featured">
+              <i class="fa-brands fa-youtube"></i> YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container copyright">
+      <p>&copy; <a href="#">SigmaPi Academy</a> All Rights Reserved</p>
+    </div>
+  </footer>
+  </body>
+</html>
