@@ -4,7 +4,7 @@
 }
 
 .testimonials-section h2 {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 10px;
   color: #1f2937;
@@ -21,10 +21,10 @@
 }
 
 .video-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
 }
 
 .video-card {
@@ -51,5 +51,40 @@
   font-size: 15px;
   color: #666;
   margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  
+  .testimonials-section {
+    font-size: 24px;
+    padding: 30px 30px;
+  }
+  .video-card iframe {
+    height: 160px;
+  }
+  .video-grid{
+    grid: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .video-card {
+    max-width: 100px;
+    flex: 1 1 100px;
+  }
+  .video-card iframe {
+    height: 120px;
+  }
+  .testimonials-section h2 {
+    font-size: 15px;
+  }
+  .testimonials-section p {
+    font-size: 12px;
+  }
+
 }
 

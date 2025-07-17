@@ -6,11 +6,10 @@
   <title>Privacy Policy</title>
   <link rel="icon" type="image" href="/pictures/SigmaPi Logo.png" />
   <link rel="stylesheet" href="/styles.css" />
-  <link rel="stylesheet" href="/stylesheet.css" />
+  <script defer src="/script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   </head>
-  
   <body>
   <!-- Header -->
   <header class="main-header">
@@ -43,16 +42,32 @@
     </div>
 
     <!-- Mobile Overlay Menu -->
-    <div class="mobile-overlay hidden">
-      <div class="mobile-menu">
-        <ul>
-          <li class="nav-item">Home</li>
-          <li class="nav-item">Courses</li>
-          <li class="nav-item">Testimonials</li>
-          <li class="nav-item">Contact</li>
-        </ul>
+    <div class="mobile-overlay hidden" id="mobileOverlay">
+  <div class="mobile-menu hidden" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <img src="pictures/SigmaPi Logo.png" alt="Logo" class="mobile-logo-img" />
+        <span class="mobile-logo-text">SigmaPi Academy</span>
       </div>
+      <button class="close-btn" id="closeMenu">close</button>
     </div>
+
+    <ul class="mobile-nav">
+      <li class="nav-item"><a href="/index.html">Home</a></li>
+
+      <li class="nav-item has-submenu" id="coursesToggle">
+        <span class="nav-link">Courses</span>
+        <ul class="submenu hidden" id="coursesSubmenu">
+          <li><a href="/school.html">School-Based</a></li>
+          <li><a href="/college.html">College-Based</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a href="/testimonials.html">Testimonials</a></li>
+      <li class="nav-item"><a href="/contact.html">Contact</a></li>
+    </ul>
+  </div>
+</div>
   </header>
 
   <!-- Body Content -->

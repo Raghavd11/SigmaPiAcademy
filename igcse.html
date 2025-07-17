@@ -14,6 +14,104 @@
   <!-- Three.js for Vanta -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
 </head>
+<style>
+
+.footer {
+  padding: 60px 20px 30px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #0d1b2a;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: nowrap;
+}
+
+.footer-column {
+  width: 250px;
+  text-align: left;
+}
+
+.footer h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  position: relative;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.footer-link a {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #f1f1f1;
+  text-decoration: none;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.footer-link a:hover {
+  color: #0071e3;
+}
+
+.copyright {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ===== Responsive Styling (Keep Columns Side-by-Side) ===== */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .footer-column {
+    width: 45%;
+  }
+
+  .footer-link a {
+    font-size: 11px;
+  }
+
+  .footer h2 {
+    font-size: 13px;
+  }
+
+  .copyright p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    gap: 10px;
+  }
+
+  .footer-column {
+    width: 42%;
+  }
+
+  .footer-link a {
+    font-size: 10px;
+  }
+
+  .footer h2 {
+    font-size: 12px;
+  }
+
+  .copyright p {
+    font-size: 9px;
+  }
+}
+</style>
 <body>
   <!-- Header -->
   <header class="main-header">
@@ -45,22 +143,36 @@
       </div>
     </div>
 
-
-    <!-- Mobile Overlay Menu -->
-    <div class="mobile-overlay hidden">
-      <div class="mobile-menu">
-        <ul>
-          <li class="nav-item">Home</li>
-          <li class="nav-item active">Courses</li>
-          <li class="nav-item">Testimonials</li>
-          <li class="nav-item">Contact</li>
-        </ul>
+<div class="mobile-overlay hidden" id="mobileOverlay">
+  <div class="mobile-menu hidden" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <img src="pictures/SigmaPi Logo.png" alt="Logo" class="mobile-logo-img" />
+        <span class="mobile-logo-text">SigmaPi Academy</span>
       </div>
+      <button style="font-size: 20px;" class="close-btn" id="closeMenu">close</button>
     </div>
+
+    <ul class="mobile-nav">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+
+      <li class="nav-item has-submenu" id="coursesToggle">
+        <span class="nav-link">Courses</span>
+        <ul class="submenu hidden" id="coursesSubmenu">
+          <li><a href="school.html">School-Based</a></li>
+          <li><a href="college.html">College-Based</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a href="testimonials.html">Testimonials</a></li>
+      <li class="nav-item"><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</div>
   </header>
   <br><br>
 <div style="text-align: center;">
-  <span class="subject">THEORY OF COMPUTER SCIENCE – IGCSE</span>
+  <span class="subject">COMPUTER SCIENCE – IGCSE</span>
 </div>
 <div class="table-container">
   <table>
@@ -138,44 +250,104 @@
   </table>
 </div>
 
-
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="row footer-content">
-        <div class="footer-column">
-          <div class="footer-link">
-            <h2 style="text-align: center;">Miscellaneous</h2>
-            <a style="margin-left: 60px;" href="#">Terms & Conditions</a>
-            <a style="margin-left: 60px;" href="./Misc/privacy.html">Privacy Policy</a>
-            <a style="margin-left: 60px;" href="tel:+91-988-318-3128">Contact</a>
-          </div>
+  <div class="container">
+    <div class="footer-content">
+      <!-- Column 1: Miscellaneous Links -->
+      <div class="footer-column">
+        <div class="footer-link">
+          <h2>Miscellaneous</h2>
+          <a style="margin-left: 60px;" href="./Misc/privacy.html">Privacy Policy</a>
+          <a style="margin-left: 60px;" href="#">Terms & Conditions</a>
+          <a style="margin-left: 60px;" href="tel:+91-988-318-3128">Contact</a>
         </div>
+      </div>
 
-        <div class="footer-column">
-          <div class="footer-link">
-            <h2 style="text-align: center;">Social Media</h2>
-            <a style="margin-left: 75px;" target="_blank" href="https://www.facebook.com/Sigma-Pi-Academy-113496663694837">
-              <i class="fa-brands fa-facebook"></i> Facebook
-            </a>
-            <a style="margin-left: 75px;" target="_blank" href="https://api.whatsapp.com/send?phone=919883183128">
-              <i class="fa-brands fa-whatsapp"></i> WhatsApp
-            </a>
-            <a style="margin-left: 75px;" target="_blank" href="https://www.instagram.com/bluejteacher/">
-              <i class="fa-brands fa-instagram"></i> Instagram
-            </a>
-            <a style="margin-left: 75px;" target="_blank" href="https://www.youtube.com/channel/UCfB67QqVUDy8GE00Ly6gCQQ/featured">
-              <i class="fa-brands fa-youtube"></i> YouTube
-            </a>
-          </div>
+      <!-- Column 2: Social Media Links -->
+      <div class="footer-column">
+        <div class="footer-link">
+          <h2>Social Media</h2>
+          <a style="margin-left: 75px;" target="_blank" href="https://www.facebook.com/Sigma-Pi-Academy-113496663694837">
+            <i class="fa-brands fa-facebook"></i> Facebook
+          </a>
+          <a style="margin-left: 75px;" target="_blank" href="https://api.whatsapp.com/send?phone=919883183128">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+          <a style="margin-left: 75px;" target="_blank" href="https://www.instagram.com/bluejteacher/">
+            <i class="fa-brands fa-instagram"></i> Instagram
+          </a>
+          <a style="margin-left: 75px;" target="_blank" href="https://www.youtube.com/channel/UCfB67QqVUDy8GE00Ly6gCQQ/featured">
+            <i class="fa-brands fa-youtube"></i> YouTube
+          </a>
         </div>
       </div>
     </div>
+  </div>
 
+  <div class="container copyright">
+    <p>&copy; <a href="#">SigmaPi Academy</a> All Rights Reserved</p>
+  </div>
+</footer>
 
-    <div class="container copyright">
-      <p>&copy; <a href="#">SigmaPi Academy</a> All Rights Reserved</p>
-    </div>
-  </footer>
+  <script>
+  // Toggle submenu on click
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButtons = document.querySelectorAll('.toggle-btn');
+
+    toggleButtons.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const targetId = btn.dataset.target;
+        const submenu = document.getElementById(targetId);
+        if (submenu) {
+          submenu.classList.toggle('hidden');
+        }
+      });
+    });
+  });
+document.addEventListener('DOMContentLoaded', function () {
+  const openBtnDesktop = document.getElementById('openModal');
+  const openBtnMobile = document.getElementById('openModalMobile');
+  const modal = document.getElementById('registerModal');
+  const closeBtn = document.getElementById('closeModal');
+  const overlay = document.getElementById('modalOverlay');
+
+  function openModal() {
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  if (openBtnDesktop) {
+    openBtnDesktop.addEventListener('click', openModal);
+  }
+
+  if (openBtnMobile) {
+    openBtnMobile.addEventListener('click', () => {
+      openModal();
+      document.getElementById('mobileOverlay')?.classList.add('hidden');
+      document.getElementById('mobileMenu')?.classList.add('hidden');
+      document.getElementById('closeMenu')?.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+      // Reset hamburger icon
+      document.getElementById('hamburger').textContent = '☰';
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  if (overlay) {
+    overlay.addEventListener('click', closeModal);
+  }
+});
+
+</script>
+  <script defer src="script.js"></script>
   </body>
 </html>

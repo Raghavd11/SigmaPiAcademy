@@ -4,19 +4,20 @@
   <meta charset="UTF-8">
   <title>Contact Us</title>
   <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    
+
 #grid-bg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
   overflow: hidden;
   pointer-events: none;
 }
@@ -38,7 +39,30 @@
   shape-rendering: crispEdges;
     }
 
+    .footer h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #999999;
+  border-radius: 0 100% 100% 0;
+}
+
+/* Default (Desktop) - 3 per row */
+.contact-content .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
   </style>
+  
 
 </head>
 <body class="bg-blue-50 text-gray-900 relative">
@@ -56,7 +80,7 @@
       <div class="header-right">
         <nav class="nav-links">
           <ul>
-            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item active"><a href="index.html">Home</a></li>
             <li class="nav-item dropdown">
               <a style="cursor:default;" class="dropbtn">Courses</a>
               <ul class="dropdown-menu">
@@ -67,95 +91,113 @@
               </ul>
             </li>
             <li class="nav-item"><a href="testimonials.html">Testimonials</a></li>
-            <li class="nav-item active"><a href="contact.html">Contact</a></li>
+            <li class="nav-item"><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
         <div class="hamburger" id="hamburger">&#9776;</div> 
       </div>
     </div>
-   <!-- Mobile Overlay Menu -->
-<div class="mobile-overlay hidden">
-  <div class="mobile-menu">
-    <ul>
-      <li class="nav-item">Home</li>
-      <li class="nav-item">Courses</li>
-      <li class="nav-item">Testimonials</li>
-      <li class="nav-item active">Contact</li>
+<div class="mobile-overlay hidden" id="mobileOverlay">
+  <div class="mobile-menu hidden" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <img src="pictures/SigmaPi Logo.png" alt="Logo" class="mobile-logo-img" />
+        <span class="mobile-logo-text">SigmaPi Academy</span>
+      </div>
+      <button class="close-btn" id="closeMenu">close</button>
+    </div>
+
+    <ul class="mobile-nav">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+
+      <li class="nav-item has-submenu" id="coursesToggle">
+        <span class="nav-link">Courses</span>
+        <ul class="submenu hidden" id="coursesSubmenu">
+          <li><a href="school.html">School-Based</a></li>
+          <li><a href="college.html">College-Based</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a href="testimonials.html">Testimonials</a></li>
+      <li class="nav-item"><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </div>
 </header>
 
+<div class="contact-grid">
 <!-- Light Blue SVG Background -->
 <svg id="grid-bg"></svg>
 <!-- Contact Section -->
-<section class="flex items-center justify-center pt-10 pb-20 min-h-[80vh]">
+<section class="sec flex items-center justify-center pt-10 pb-20 min-h-[80vh]">
   <div class="contact-content max-w-4xl w-full bg-white rounded-3xl shadow-xl p-10 backdrop-blur-lg bg-opacity-90 text-center">
     <h2 class="text-4xl font-bold text-blue-500 mb-3">Let's Connect!</h2>
     <p class="text-lg mb-10 text-gray-700">Get in touch for queries, collaborations, or just to say hi.</p>
     <!-- Add your contact options here -->
-    <div class="grid gap-5 grid-cols-1 md:grid-cols-3">
+    <div class="grid gap-5 grid-cols-3 w-full max-w-5xl mx-auto">
     <!-- Call Us -->
 <a href="tel:+919883183128" class="no-underline hover:no-underline">
-  <div class="group bg-white text-black border border-gray-300 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all p-5 rounded-2xl shadow-md flex items-center gap-4">
-    <i class="fas fa-phone-alt text-black text-xl transition-colors group-hover:text-white"></i>
-    <span class="font-medium text-lg transition-colors group-hover:text-white">Call Us</span>
+  <div class="group w-full h-full bg-white text-black border border-gray-300 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all px-4 py-6 rounded-2xl shadow-md flex justify-center items-center gap-3">
+    <i class="fas fa-phone-alt text-xl transition-colors group-hover:text-white"></i>
+    <span class="font-medium text-base transition-colors group-hover:text-white">Call Us</span>
   </div>
 </a>
 
-<!-- Gmail -->
+<!-- Email -->
 <a href="mailto:info@sigmapi-academy.com" class="no-underline hover:no-underline">
-  <div class="group bg-white text-black border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 transition-all p-5 rounded-2xl shadow-md flex items-center gap-4">
-    <i class="fas fa-envelope text-black text-xl transition-colors group-hover:text-white"></i>
-    <span class="font-medium text-lg transition-colors group-hover:text-white">Email</span>
+  <div class="group w-full h-full bg-white text-black border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 transition-all px-4 py-6 rounded-2xl shadow-md flex justify-center items-center gap-3">
+    <i class="fas fa-envelope text-xl transition-colors group-hover:text-white"></i>
+    <span class="font-medium text-base transition-colors group-hover:text-white">Email</span>
   </div>
 </a>
 
 <!-- GitHub -->
 <a href="https://github.com/kumarsatyendermishra" target="_blank" class="no-underline hover:no-underline">
-  <div class="group bg-white text-black border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all p-5 rounded-2xl shadow-md flex items-center gap-4">
-    <i class="fab fa-github text-black text-xl transition-colors group-hover:text-white"></i>
-    <span class="font-medium text-lg transition-colors group-hover:text-white">GitHub</span>
+  <div class="group w-full h-full bg-white text-black border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all px-4 py-6 rounded-2xl shadow-md flex justify-center items-center gap-3">
+    <i class="fab fa-github text-xl transition-colors group-hover:text-white"></i>
+    <span class="font-medium text-base transition-colors group-hover:text-white">GitHub</span>
   </div>
 </a>
 
 <!-- LinkedIn -->
 <a href="https://www.linkedin.com/in/satyender-mishra-75963799/" target="_blank" class="no-underline hover:no-underline">
-  <div class="group bg-white text-black border border-gray-300 hover:bg-blue-700 hover:text-white hover:border-blue-700 transition-all p-5 rounded-2xl shadow-md flex items-center gap-4">
-    <i class="fab fa-linkedin-in text-black text-xl transition-colors group-hover:text-white"></i>
-    <span class="font-medium text-lg transition-colors group-hover:text-white">LinkedIn</span>
+  <div class="group w-full h-full bg-white text-black border border-gray-300 hover:bg-blue-700 hover:text-white hover:border-blue-700 transition-all px-4 py-6 rounded-2xl shadow-md flex justify-center items-center gap-3">
+    <i class="fab fa-linkedin-in text-xl transition-colors group-hover:text-white"></i>
+    <span class="font-medium text-base transition-colors group-hover:text-white">LinkedIn</span>
   </div>
 </a>
 
 <!-- WhatsApp -->
 <a href="https://api.whatsapp.com/send?phone=919883183128" target="_blank" class="no-underline hover:no-underline">
-  <div class="group bg-white text-black border border-gray-300 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all p-5 rounded-2xl shadow-md flex items-center gap-4">
-    <i class="fab fa-whatsapp text-black text-xl transition-colors group-hover:text-white"></i>
-    <span class="font-medium text-lg transition-colors group-hover:text-white">WhatsApp</span>
+  <div class="group w-full h-full bg-white text-black border border-gray-300 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all px-4 py-6 rounded-2xl shadow-md flex justify-center items-center gap-3">
+    <i class="fab fa-whatsapp text-xl transition-colors group-hover:text-white"></i>
+    <span class="font-medium text-base transition-colors group-hover:text-white">WhatsApp</span>
   </div>
 </a>
 
-<!-- Microsoft Teams -->
+<!-- Teams -->
 <a href="https://teams.microsoft.com/l/chat/0/0?users=youremail@domain.com" target="_blank" class="no-underline hover:no-underline">
-  <div class="group bg-white text-black border border-gray-300 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-all p-5 rounded-2xl shadow-md flex items-center gap-4">
-    <i class="fab fa-microsoft text-black text-xl transition-colors group-hover:text-white"></i>
-    <span class="font-medium text-lg transition-colors group-hover:text-white">Teams</span>
+  <div class="group w-full h-full bg-white text-black border border-gray-300 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-all px-4 py-6 rounded-2xl shadow-md flex justify-center items-center gap-3">
+    <i class="fab fa-microsoft text-xl transition-colors group-hover:text-white"></i>
+    <span class="font-medium text-base transition-colors group-hover:text-white">Teams</span>
   </div>
 </a>
+</div>
+
 
     </div>
   </div>
 </section>
 
-<footer style="margin-top: 50px;" class="footer">
+<footer class="footer" style="margin-top:55px;">
   <div class="container">
-    <div style="margin-left: 125px;" class="row footer-content">
+    <div class="footer-content">
       <!-- Column 1: Miscellaneous Links -->
       <div class="footer-column">
         <div class="footer-link">
-          <h2 style="text-align: center;">Miscellaneous</h2>
-          <a style="margin-left: 60px;" href="#">Terms & Conditions</a>
+          <h2 style="margin-left: 60px;">Miscellaneous</h2>
           <a style="margin-left: 60px;" href="./Misc/privacy.html">Privacy Policy</a>
+          <a style="margin-left: 60px;" href="#">Terms & Conditions</a>
           <a style="margin-left: 60px;" href="tel:+91-988-318-3128">Contact</a>
         </div>
       </div>
@@ -163,17 +205,17 @@
       <!-- Column 2: Social Media Links -->
       <div class="footer-column">
         <div class="footer-link">
-          <h2 style="text-align: center;">Social Media</h2>
-          <a style="margin-left: 75px;" target="_blank" href="https://www.facebook.com/Sigma-Pi-Academy-113496663694837">
+          <h2 style="margin-left: 50px;">Social Media</h2>
+          <a style="margin-left: 55px;" target="_blank" href="https://www.facebook.com/Sigma-Pi-Academy-113496663694837">
             <i class="fa-brands fa-facebook"></i> Facebook
           </a>
-          <a style="margin-left: 75px;" target="_blank" href="https://api.whatsapp.com/send?phone=919883183128">
+          <a style="margin-left: 55px;" target="_blank" href="https://api.whatsapp.com/send?phone=919883183128">
             <i class="fa-brands fa-whatsapp"></i> WhatsApp
           </a>
-          <a style="margin-left: 75px;" target="_blank" href="https://www.instagram.com/bluejteacher/">
+          <a style="margin-left: 55px;" target="_blank" href="https://www.instagram.com/bluejteacher/">
             <i class="fa-brands fa-instagram"></i> Instagram
           </a>
-          <a style="margin-left: 75px;" target="_blank" href="https://www.youtube.com/channel/UCfB67QqVUDy8GE00Ly6gCQQ/featured">
+          <a style="margin-left: 55px;" target="_blank" href="https://www.youtube.com/channel/UCfB67QqVUDy8GE00Ly6gCQQ/featured">
             <i class="fa-brands fa-youtube"></i> YouTube
           </a>
         </div>
@@ -181,8 +223,8 @@
     </div>
   </div>
 
-  <div style="margin-left: 50px;" class="container copyright">
-    <p>&copy; <a href="#">SigmaPi Academy</a>All Rights Reserved</p>
+  <div class="container copyright">
+    <p>&copy; <a href="#">SigmaPi Academy</a> All Rights Reserved</p>
   </div>
 </footer>
 

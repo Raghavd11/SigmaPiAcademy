@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -29,7 +30,7 @@
           <li class="nav-item"><a href="index.html">Home</a></li>
           <!-- CLASS XI Dropdown -->
           <li class="nav-item dropdown">
-            <a class="dropbtn">Class IX-X</a>
+            <a class="dropbtn">&nbsp;Class IX-X</a>
             <ul class="dropdown-menu">
               <div>
                 <li><a href="/html_cbse/ca.html" class="base">Computer Application</a></li>
@@ -40,7 +41,7 @@
 
           <!-- CLASS XII Dropdown -->
           <li class="nav-item dropdown">
-            <a class="dropbtn">Class XI-XII</a>
+            <a class="dropbtn">&nbsp;Class XI-XII</a>
             <ul class="dropdown-menu">
               <div>
                 <li><a href="/html_cbse/cs.html" class="base">Computer Science</a></li>
@@ -49,15 +50,49 @@
               </div>
             </ul>
           </li>
-          <div class="hero-buttons">
-        <button style="margin-left: 20px;" class="register" id="openModal">Register</button>
-      </div>
+          <li class="nav-item">
+                <button style="margin-left: 20px;" class="register" id="openModal">Register</button>
+            </li>
           <!-- <li class="nav-item"><a href="contact.html">Contact</a></li> -->
         </ul>
       </nav>
-      <div class="hamburger" id="hamburger">&#9776;</div>
+      <div class="hamburger" id="hamburger">☰</div>
     </div>
   </div>
+  <div class="mobile-overlay hidden" id="mobileOverlay">
+  <div class="mobile-menu hidden" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <img src="pictures/SigmaPi Logo.png" alt="Logo" class="mobile-logo-img" />
+        <span class="mobile-logo-text">SigmaPi Academy</span>
+      </div>
+      <button style="margin-right: 20px;" class="close-btn" id="closeMenu">close</button>
+    </div>
+
+    <ul class="mobile-nav">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+
+      <li class="nav-item">
+        <span class="nav-link toggle-btn" data-target="submenuClass9">Class IX–X</span>
+        <ul class="submenu hidden" id="submenuClass9">
+          <li><a href="/html_cbse/ca.html">Computer Application</a></li>
+          <li><a href="/html_cbse/ai1.html">Artificial Intelligence</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <span class="nav-link toggle-btn" data-target="submenuClass11">Class XI–XII</span>
+        <ul class="submenu hidden" id="submenuClass11">
+          <li><a href="/html_cbse/cs.html">Computer Science</a></li>
+          <li><a href="/html_cbse/ai2.html">Artificial Intelligence</a></li>
+          <li><a href="/html_cbse/ip.html">Informatics Practices</a></li>
+        </ul>
+      </li>
+            <li class="nav-item">
+      <button style="margin-left: 15px;" class="register" id="openModalMobile">Register</button></li>
+    </ul>
+  </div>
+</div>
 </header>
 <!-- Hero Section -->
 <section class="herowb">
@@ -123,16 +158,15 @@
 </div>
 <br><br>
 
-
 <footer class="footer">
   <div class="container">
-    <div style="margin-left: 125px;" class="row footer-content">
+    <div class="footer-content">
       <!-- Column 1: Miscellaneous Links -->
       <div class="footer-column">
         <div class="footer-link">
-          <h2 style="text-align: center;">Miscellaneous</h2>
-          <a style="margin-left: 60px;" href="#">Terms & Conditions</a>
+          <h2>Miscellaneous</h2>
           <a style="margin-left: 60px;" href="./Misc/privacy.html">Privacy Policy</a>
+          <a style="margin-left: 60px;" href="#">Terms & Conditions</a>
           <a style="margin-left: 60px;" href="tel:+91-988-318-3128">Contact</a>
         </div>
       </div>
@@ -140,7 +174,7 @@
       <!-- Column 2: Social Media Links -->
       <div class="footer-column">
         <div class="footer-link">
-          <h2 style="text-align: center;">Social Media</h2>
+          <h2>Social Media</h2>
           <a style="margin-left: 75px;" target="_blank" href="https://www.facebook.com/Sigma-Pi-Academy-113496663694837">
             <i class="fa-brands fa-facebook"></i> Facebook
           </a>
@@ -158,14 +192,12 @@
     </div>
   </div>
 
-  <div style="margin-left: 50px;" class="container copyright">
-    <p>&copy; <a href="#">SigmaPi Academy</a>All Rights Reserved</p>
+  <div class="container copyright">
+    <p>&copy; <a href="#">SigmaPi Academy</a> All Rights Reserved</p>
   </div>
 </footer>
 
-
-
-    <div class="custom-modal" id="registerModal">
+   <div class="custom-modal" id="registerModal">
   <div class="modal-overlay" id="modalOverlay"></div>
   <div class="modal-content">
     <div class="modal-header">
@@ -181,6 +213,62 @@
     </div>
   </div>
 </div>
-  <script src="script.js"></script>
+<script>
+  // Toggle submenu on click
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButtons = document.querySelectorAll('.toggle-btn');
+
+    toggleButtons.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const targetId = btn.dataset.target;
+        const submenu = document.getElementById(targetId);
+        if (submenu) {
+          submenu.classList.toggle('hidden');
+        }
+      });
+    });
+  });
+document.addEventListener('DOMContentLoaded', function () {
+  const openBtnDesktop = document.getElementById('openModal');
+  const openBtnMobile = document.getElementById('openModalMobile');
+  const modal = document.getElementById('registerModal');
+  const closeBtn = document.getElementById('closeModal');
+  const overlay = document.getElementById('modalOverlay');
+
+  function openModal() {
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  if (openBtnDesktop) {
+    openBtnDesktop.addEventListener('click', openModal);
+  }
+
+  if (openBtnMobile) {
+    openBtnMobile.addEventListener('click', () => {
+      openModal();
+      document.getElementById('mobileOverlay')?.classList.add('hidden');
+      document.getElementById('mobileMenu')?.classList.add('hidden');
+      document.getElementById('closeMenu')?.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+      // Reset hamburger icon
+      document.getElementById('hamburger').textContent = '☰';
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  if (overlay) {
+    overlay.addEventListener('click', closeModal);
+  }
+});
+</script>
 </body>
 </html>

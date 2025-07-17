@@ -26,7 +26,7 @@
       <div class="header-right">
         <nav class="nav-links">
           <ul>
-            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item active"><a href="index.html">Home</a></li>
             <li class="nav-item dropdown">
               <a style="cursor:default;" class="dropbtn">Courses</a>
               <ul class="dropdown-menu">
@@ -36,24 +36,40 @@
                 </div>
               </ul>
             </li>
-            <li class="nav-item active"><a href="t.html">Testimonials</a></li>
+            <li class="nav-item"><a href="testimonials.html">Testimonials</a></li>
             <li class="nav-item"><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
         <div class="hamburger" id="hamburger">&#9776;</div> 
       </div>
     </div>
-   <!-- Mobile Overlay Menu -->
-<div class="mobile-overlay hidden">
-  <div class="mobile-menu">
-    <ul>
-      <li class="nav-item">Home</li>
-      <li class="nav-item">Courses</li>
-      <li class="nav-item active">Testimonials</li>
-      <li class="nav-item">Contact</li>
+<div class="mobile-overlay hidden" id="mobileOverlay">
+  <div class="mobile-menu hidden" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <img src="pictures/SigmaPi Logo.png" alt="Logo" class="mobile-logo-img" />
+        <span class="mobile-logo-text">SigmaPi Academy</span>
+      </div>
+      <button class="close-btn" id="closeMenu">close</button>
+    </div>
+
+    <ul class="mobile-nav">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+
+      <li class="nav-item has-submenu" id="coursesToggle">
+        <span class="nav-link">Courses</span>
+        <ul class="submenu hidden" id="coursesSubmenu">
+          <li><a href="school.html">School-Based</a></li>
+          <li><a href="college.html">College-Based</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a href="testimonials.html">Testimonials</a></li>
+      <li class="nav-item"><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </div>
+
 </header>
 
   <section class="testimonials-section">
@@ -63,7 +79,7 @@
   <strong style="display: block;">Satyender Kumar Mishra</strong>.
 </p>
 
-
+<div class="video-grid-wrapper">
   <div class="video-grid">
     <!-- Aditya Kejriwal -->
     <div class="video-card">
@@ -161,6 +177,7 @@
       <h3>Yashvi Jain</h3>
       <p>Modern High School For Girls, Kolkata<br>ISC Batch of 2020</p>
     </div>
+  </div>
   </div>
 </section>
 

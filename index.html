@@ -42,17 +42,33 @@
         <div class="hamburger" id="hamburger">&#9776;</div> 
       </div>
     </div>
-   <!-- Mobile Overlay Menu -->
-<div class="mobile-overlay hidden">
-  <div class="mobile-menu">
-    <ul>
-      <li class="nav-item active">Home</li>
-      <li class="nav-item">Courses</li>
-      <li class="nav-item">Testimonials</li>
-      <li class="nav-item">Contact</li>
+<div class="mobile-overlay hidden" id="mobileOverlay">
+  <div class="mobile-menu hidden" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <img src="pictures/SigmaPi Logo.png" alt="Logo" class="mobile-logo-img" />
+        <span class="mobile-logo-text">SigmaPi Academy</span>
+      </div>
+      <button class="close-btn" id="closeMenu">close</button>
+    </div>
+
+    <ul class="mobile-nav">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+
+      <li class="nav-item has-submenu" id="coursesToggle">
+        <span class="nav-link">Courses</span>
+        <ul class="submenu hidden" id="coursesSubmenu">
+          <li><a href="school.html">School-Based</a></li>
+          <li><a href="college.html">College-Based</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a href="testimonials.html">Testimonials</a></li>
+      <li class="nav-item"><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </div>
+
 </header>
     <div id="vanta-globe" class="hero">
   <div class="hero-container">
@@ -65,9 +81,6 @@
         <button class="about-us" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">About</button>
       </div>
     </div>
-    <!-- <div class="hero-image">
-      <img src="pictures/Hero.png" alt="Image">
-    </div> -->
   </div>
 </div>
 
@@ -224,22 +237,9 @@ VANTA.GLOBE({
   el: "#vanta-globe",
   color: 0x0077ff,
   backgroundColor: 0xf5f6f7,
-  size: 1.0
+  scale: 1.0,
+  scaleMobile: 0.75,
 });
-</script>
-
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const overlay = document.querySelector('.mobile-overlay');
-
-  hamburger.addEventListener('click', () => {
-    overlay.classList.toggle('hidden');
-    hamburger.classList.toggle('active');
-  });
-
-  document.getElementById('modalOverlay')?.addEventListener('click', () => {
-    document.getElementById('registerModal')?.classList.remove('show');
-  });
 </script>
 
 

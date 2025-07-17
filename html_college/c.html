@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/html/detailedfiles/style.css" />
   <link rel="stylesheet" href="/stylesheet.css" />
+    <script defer src="/script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 
@@ -20,6 +21,104 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
 /* background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(120, 159, 251)); */
     }
   </style>
+  <style>
+
+.footer {
+  padding: 60px 20px 30px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #0d1b2a;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: nowrap;
+}
+
+.footer-column {
+  width: 250px;
+  text-align: left;
+}
+
+.footer h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  position: relative;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.footer-link a {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #f1f1f1;
+  text-decoration: none;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.footer-link a:hover {
+  color: #0071e3;
+}
+
+.copyright {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ===== Responsive Styling (Keep Columns Side-by-Side) ===== */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .footer-column {
+    width: 45%;
+  }
+
+  .footer-link a {
+    font-size: 11px;
+  }
+
+  .footer h2 {
+    font-size: 13px;
+  }
+
+  .copyright p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    gap: 10px;
+  }
+
+  .footer-column {
+    width: 42%;
+  }
+
+  .footer-link a {
+    font-size: 10px;
+  }
+
+  .footer h2 {
+    font-size: 12px;
+  }
+
+  .copyright p {
+    font-size: 9px;
+  }
+}
+</style>
 <body>
   <!-- Header -->
   <header class="main-header">
@@ -50,19 +149,32 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
         <div class="hamburger" id="hamburger">&#9776;</div> 
       </div>
     </div>
-
-
-    <!-- Mobile Overlay Menu -->
-    <div class="mobile-overlay hidden">
-      <div class="mobile-menu">
-        <ul>
-          <li class="nav-item">Home</li>
-          <li class="nav-item active">Courses</li>
-          <li class="nav-item">Testimonials</li>
-          <li class="nav-item">Contact</li>
-        </ul>
+<div class="mobile-overlay hidden" id="mobileOverlay">
+  <div class="mobile-menu hidden" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <img src="/pictures/SigmaPi Logo.png" alt="Logo" class="mobile-logo-img" />
+        <span class="mobile-logo-text">SigmaPi Academy</span>
       </div>
+      <button style="margin-right: 20px;" style="font-size: 20px;" class="close-btn" id="closeMenu">close</button>
     </div>
+
+    <ul class="mobile-nav">
+      <li class="nav-item"><a href="/index.html">Home</a></li>
+
+      <li class="nav-item has-submenu" id="coursesToggle">
+        <span class="nav-link">Courses</span>
+        <ul class="submenu hidden" id="coursesSubmenu">
+          <li><a href="/school.html">School-Based</a></li>
+          <li><a href="/college.html">College-Based</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a href="/testimonials.html">Testimonials</a></li>
+      <li class="nav-item"><a href="/contact.html">Contact</a></li>
+    </ul>
+  </div>
+</div>
   </header>
   <br><br>
 <div style="text-align: center;">

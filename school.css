@@ -11,20 +11,29 @@
   border-radius: 8px;   
 }
 
-.courses-grid-section{
-  margin-left: 50px;
-  margin-right: 50px;
+@media (max-width: 768px) {
+  .subject {
+    font-size: 20px;
+  }
 }
+
+@media (max-width: 480px) {
+  .subject {
+    font-size: 18px;
+  }
+}
+
+
 
 .courses-flex-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 3rem;
   justify-content: center;
 }
 
 .course-new-card {
-  width: 250px;
+  width: 380px;
   border-radius: 15px;
   background-color: #fff;
   overflow: hidden;
@@ -103,3 +112,121 @@
   font-size: 0.85rem;
   color: #777;
 }
+
+@media (max-width: 1024px) {
+  .courses-flex-container,
+  .coursesc-flex-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .course-new-card,
+  .coursec-new-card {
+    width: 45%; /* Keeps two cards per row */
+  }
+
+  .course-img,
+  .coursec-img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .course-info {
+    padding: 0.9rem;
+  }
+
+  .badge {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .course-info h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  .course-info p {
+    font-size: 0.85rem;
+    line-height: 1.3;
+    color: #555;
+  }
+
+  .courses-grid-section {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .courses-flex-container,
+  .coursesc-flex-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .course-new-card,
+  .coursec-new-card {
+    width: 44%; /* Two per row, even on small screens */
+  }
+
+  .course-img,
+  .coursec-img {
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .course-info {
+    padding: 0.75rem;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .course-info h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  .course-info p {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    color: #666;
+  }
+  .courses-grid-section{
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-new-card,
+  .coursec-new-card {
+    width: 40%; /* still keeps 2 per row */
+  }
+
+  .course-img,
+  .coursec-img {
+    height: 130px;
+  }
+
+  .course-info h3 {
+    font-size: 0.65rem;
+  }
+
+  .course-info p {
+    font-size: 0.5rem;
+  }
+  .courses-grid-section{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+
