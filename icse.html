@@ -6,13 +6,37 @@
   <title>ISC & ICSE</title>
   <link rel="stylesheet" href="stylesheet.css" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image" href="/pictures/SigmaPi Logo.png" />
+  <link rel="icon" type="image" href="pictures/SigmaPi Logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<style>
+
+/* Dropdown menu */
+.dropdown-menu {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 120%;
+  left: -0.5rem;
+  background: #fff;
+  padding: 10px 0;
+  border-radius: 12px;
+  min-width: 150px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+</style>
 <body>
   <!-- Header -->
    <header class="main-header">
@@ -98,7 +122,7 @@
 <!-- Hero Section -->
 <section class="herowb">
   <div class="heroisc-content">
-    <img src="/pictures/isc logo.png" alt="ISC & ICSE" class="heroisc-image" />
+    <img src="pictures/isc logo.png" alt="ISC & ICSE" class="heroisc-image" />
     <h1>
   Course Curated for<br />
   Indian Certificate of Secondary Education
@@ -111,7 +135,7 @@
   <!-- Block 1 -->
   <div class="grid grid-cols-2 gap-6 sm:gap-10 items-center animate-fade-in-up duration-700">
     <div class="flex justify-center">
-      <img src="./pictures/interactive.jpeg" alt="Online Test"
+      <img src="pictures/interactive.jpeg" alt="Online Test"
         class="rounded-2xl shadow-lg border-2 border-black w-full max-w-full h-auto object-cover transition-transform hover:scale-105 duration-500" />
     </div>
     <div
@@ -135,7 +159,7 @@
       </p>
     </div>
     <div class="flex justify-center">
-      <img src="./pictures/notes.jpg" alt="One-to-One Meet"
+      <img src="pictures/notes.jpg" alt="One-to-One Meet"
         class="rounded-2xl shadow-lg border-2 border-black w-full max-w-full h-auto object-cover transition-transform hover:scale-105 duration-500" />
     </div>
   </div>
@@ -143,7 +167,7 @@
   <!-- Block 3 -->
   <div class="grid grid-cols-2 gap-6 sm:gap-10 items-center animate-fade-in-up duration-700 delay-200 mb-4">
     <div class="flex justify-center">
-      <img src="./pictures/online.png" alt="Interactive Class"
+      <img src="pictures/online.png" alt="Interactive Class"
         class="rounded-2xl shadow-lg border-2 border-black w-full max-w-full h-auto object-cover transition-transform hover:scale-105 duration-500" />
     </div>
     <div

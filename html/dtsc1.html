@@ -4,19 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Data Science</title>
-  <link rel="stylesheet" href="/stylesheet.css" />
-  <link rel="stylesheet" href="/styles.css" />
-  <link rel="icon" type="image" href="/pictures/SigmaPi Logo.png" />
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" type="image" href="../pictures/SigmaPi Logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="../script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<style>
+
+/* Dropdown menu */
+.dropdown-menu {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 135%;
+  left: -0.5rem;
+  background: #fff;
+  padding: 10px 0;
+  border-radius: 12px;
+  min-width: 150px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+</style>
 <style>
     body{
 background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246));
 /* background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(120, 159, 251)); */
     }
+    
   </style>
 <body>
   <!-- Header -->
@@ -24,7 +50,7 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
   <div class="header-container">
     <div class="header-left">
       <div class="logo-section">
-        <a href="index.html"><img src="/pictures/SigmaPi Logo.png" alt="Logo" class="logo"/></a>
+        <a href="../index.html"><img src="../pictures/SigmaPi Logo.png" alt="Logo" class="logo"/></a>
         <span class="logo-text">SigmaPi Academy</span>
       </div>
     </div>
@@ -32,17 +58,17 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
     <div class="header-right">
       <nav class="nav-links">
         <ul>
-          <li class="nav-item"><a href="/index.html">Home</a></li>
+          <li class="nav-item"><a href="../index.html">Home</a></li>
           <!-- CLASS XI Dropdown -->
           <li class="nav-item dropdown active">
             <a class="dropbtn">Class XI</a>
             <ul class="dropdown-menu">
               <div>
-                <li><a href="/html/coma1.html" class="base">COMA</a></li>
-                <li><a href="/html/cbst1.html" class="base">CBST</a></li>
-                <li><a href="/html/arti1.html" class="base">ARTI</a></li>
-                <li><a href="/html/coms1.html" class="base">COMS</a></li>
-                <li><a href="/html/dtsc1.html" class="base">DTSC</a></li>
+                <li><a href="coma1.html" class="base">COMA</a></li>
+                <li><a href="cbst1.html" class="base">CBST</a></li>
+                <li><a href="arti1.html" class="base">ARTI</a></li>
+                <li><a href="coms1.html" class="base">COMS</a></li>
+                <li><a href="dtsc1.html" class="base">DTSC</a></li>
               </div>
             </ul>
           </li>
@@ -52,18 +78,17 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
             <a class="dropbtn">Class XII</a>
             <ul class="dropdown-menu">
               <div>
-                <li><a href="/html/coma2.html" class="base">COMA</a></li>
-                <li><a href="/html/cbst2.html" class="base">CBST</a></li>
-                <li><a href="/html/arti2.html" class="base">ARTI</a></li>
-                <li><a href="/html/coms2.html" class="base">COMS</a></li>
-                <li><a href="/html/dtsc2.html" class="base">DTSC</a></li>
+                <li><a href="coma2.html" class="base">COMA</a></li>
+                <li><a href="cbst2.html" class="base">CBST</a></li>
+                <li><a href="arti2.html" class="base">ARTI</a></li>
+                <li><a href="coms2.html" class="base">COMS</a></li>
+                <li><a href="dtsc2.html" class="base">DTSC</a></li>
               </div>
             </ul>
           </li>
-          <div class="hero-buttons">
-        <button class="register" id="openModal">Register</button>
-      </div>
-          <!-- <li class="nav-item"><a href="contact.html">Contact</a></li> -->
+        <li class="nav-item">
+          <button class="register" id="openModal">Register</button>
+        </li>
         </ul>
       </nav>
       <div class="hamburger" id="hamburger">☰</div>
@@ -73,31 +98,31 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
     <div class="mobile-menu hidden" id="mobileMenu">
       <div class="mobile-menu-header">
         <div class="mobile-logo">
-          <img src="/pictures/SigmaPi Logo.png" alt="Logo" class="mobile-logo-img" />
+          <img src="../pictures/SigmaPi Logo.png" alt="Logo" class="mobile-logo-img" />
           <span class="mobile-logo-text">SigmaPi Academy</span>
         </div>
         <button style="margin-right: 20px;" class="close-btn" id="closeMenu">close</button>
       </div>
       <ul class="mobile-nav">
-        <li class="nav-item"><a href="/index.html">Home</a></li>
+        <li class="nav-item"><a href="../index.html">Home</a></li>
         <li class="nav-item">
           <span class="nav-link toggle-btn" data-target="submenuClass9">Class XI</span>
           <ul class="submenu hidden" id="submenuClass9">
-                <li><a href="/html/coma1.html" class="base">COMA</a></li>
-                <li><a href="/html/cbst1.html" class="base">CBST</a></li>
-                <li><a href="/html/arti1.html" class="base">ARTI</a></li>
-                <li><a href="/html/coms1.html" class="base">COMS</a></li>
-                <li><a href="/html/dtsc1.html" class="base">DTSC</a></li>
+                <li><a href="coma1.html" class="base">COMA</a></li>
+                <li><a href="cbst1.html" class="base">CBST</a></li>
+                <li><a href="arti1.html" class="base">ARTI</a></li>
+                <li><a href="coms1.html" class="base">COMS</a></li>
+                <li><a href="dtsc1.html" class="base">DTSC</a></li>
           </ul>
         </li>
         <li class="nav-item">
           <span class="nav-link toggle-btn" data-target="submenuClass11">Class XII</span>
           <ul class="submenu hidden" id="submenuClass11">
-                <li><a href="/html/coma2.html" class="base">COMA</a></li>
-                <li><a href="/html/cbst2.html" class="base">CBST</a></li>
-                <li><a href="/html/arti2.html" class="base">ARTI</a></li>
-                <li><a href="/html/coms2.html" class="base">COMS</a></li>
-                <li><a href="/html/dtsc2.html" class="base">DTSC</a></li>
+                <li><a href="coma2.html" class="base">COMA</a></li>
+                <li><a href="cbst2.html" class="base">CBST</a></li>
+                <li><a href="arti2.html" class="base">ARTI</a></li>
+                <li><a href="coms2.html" class="base">COMS</a></li>
+                <li><a href="dtsc2.html" class="base">DTSC</a></li>
           </ul>
         </li>
                   <li class="nav-item">
@@ -120,22 +145,22 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
     <div class="bg-white rounded-3xl p-8 shadow-[0_0_12px_rgba(0,0,0,0.12)]">
       <div class="flex justify-between items-center mb-8">
         <h2 class="font-bold text-red-600 sem">Semester I</h2>
-        <a href="/html/detailedfiles/dtsc1a.html" class="text-blue-600 font-semibold hover:underline explore">Explore more</a>
+        <a href="detailedfiles/dtsc1a.html" class="text-blue-600 font-semibold hover:underline explore">Explore more</a>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <!-- Subtopic 1 -->
       <div class="bg-gray-50 hover:bg-white transition p-5 rounded-xl border shadow-sm text-center card-item">
-        <img src="/pictures/computer fundamentals.png" alt="Computer Fundamental" class="w-14 h-14 mx-auto mb-3 object-cover rounded-full">
+        <img src="../pictures/computer fundamentals.png" alt="Computer Fundamental" class="w-14 h-14 mx-auto mb-3 object-cover rounded-full">
         <h3 class="text-lg font-semibold text-gray-800">Computer Fundamental</h3>
       </div>
       <!-- Subtopic 2 -->
       <div class="bg-gray-50 hover:bg-white transition p-5 rounded-xl border shadow-sm text-center card-item">
-        <img src="/pictures/python logo.png" alt="Python Programming" class="w-14 h-14 mx-auto mb-3 object-cover rounded-full">
+        <img src="../pictures/python logo.png" alt="Python Programming" class="w-14 h-14 mx-auto mb-3 object-cover rounded-full">
         <h3 class="text-lg font-semibold text-gray-800">Introduction to Python Programming</h3>
       </div>
       <!-- Subtopic 3 -->
       <div class="bg-gray-50 hover:bg-white transition p-5 rounded-xl border shadow-sm text-center card-item">
-        <img src="/pictures/linear algebra.png" alt="AI & Linear Algebra" class="w-14 h-14 mx-auto mb-3 object-cover rounded-full">
+        <img src="../pictures/linear algebra.png" alt="AI & Linear Algebra" class="w-14 h-14 mx-auto mb-3 object-cover rounded-full">
         <h3 class="text-lg font-semibold text-gray-800">History of AI and Introduction to Linear Algebra</h3>
       </div>
     </div>
@@ -145,27 +170,27 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
 <div class="bg-white rounded-3xl p-8 shadow-[0_0_12px_rgba(0,0,0,0.12)]">
   <div class="flex justify-between items-center mb-8">
     <h2 class="font-bold text-red-600 sem">Semester II</h2>
-    <a href="/html/detailedfiles/dtsc1b.html" class="text-blue-600 font-semibold hover:underline explore">Explore more</a>
+    <a href="detailedfiles/dtsc1b.html" class="text-blue-600 font-semibold hover:underline explore">Explore more</a>
   </div>
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
     <!-- Subtopic 1 -->
     <div class="bg-gray-50 hover:bg-white transition p-5 rounded-xl border shadow-sm text-center card-item">
-      <img src="/pictures/data science .jpeg" alt="History of data science and statistics" class="w-14 h-14 mx-auto mb-3 object-cover rounded-full">
+      <img src="../pictures/data science .jpeg" alt="History of data science and statistics" class="w-14 h-14 mx-auto mb-3 object-cover rounded-full">
       <h3 class="text-lg font-semibold text-gray-800">History of data science and statistics</h3>
     </div>
     <!-- Subtopic 2 -->
     <div class="bg-gray-50 hover:bg-white transition p-5 rounded-xl border shadow-sm text-center card-item">
-      <img src="/pictures/data visualization.jpeg" alt="Data Visualization" class="w-14 h-14 mx-auto mb-3 object-cover rounded-full">
+      <img src="../pictures/data visualization.jpeg" alt="Data Visualization" class="w-14 h-14 mx-auto mb-3 object-cover rounded-full">
       <h3 class="text-lg font-semibold text-gray-800">Data Visualization</h3>
     </div>
     <!-- Subtopic 3 -->
     <div class="bg-gray-50 hover:bg-white transition p-5 rounded-xl border shadow-sm text-center card-item">
-      <img src="/pictures/DBMS.png" alt="Database Management" class="w-14 h-14 mx-auto mb-3 object-cover rounded-full">
+      <img src="../pictures/DBMS.png" alt="Database Management" class="w-14 h-14 mx-auto mb-3 object-cover rounded-full">
       <h3 class="text-lg font-semibold text-gray-800">Database Management</h3>
     </div>
     <!-- Subtopic 4 -->
     <div class="bg-gray-50 hover:bg-white transition p-5 rounded-xl border shadow-sm text-center card-item">
-      <img src="/pictures/business.jpeg" alt="Basics of Business Theory" class="w-14 h-14 mx-auto mb-3 object-cover rounded-full">
+      <img src="../pictures/business.jpeg" alt="Basics of Business Theory" class="w-14 h-14 mx-auto mb-3 object-cover rounded-full">
       <h3 class="text-lg font-semibold text-gray-800">Basics of Business Theory</h3>
     </div>
     </div>
@@ -183,7 +208,7 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
       <div class="footer-column">
         <div class="footer-link">
           <h2>Miscellaneous</h2>
-          <a style="margin-left: 60px;" href="./Misc/privacy.html">Privacy Policy</a>
+          <a style="margin-left: 60px;" href="../Misc/privacy.html">Privacy Policy</a>
           <a style="margin-left: 60px;" href="#">Terms & Conditions</a>
           <a style="margin-left: 60px;" href="tel:+91-988-318-3128">Contact</a>
         </div>
@@ -221,7 +246,7 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
   <div class="modal-overlay" id="modalOverlay"></div>
   <div class="modal-content">
     <div class="modal-header">
-      <img src="/pictures/SigmaPi Logo.png" width="30px" height="30px" alt="Logo">
+      <img src="../pictures/SigmaPi Logo.png" width="30px" height="30px" alt="Logo">
       <span class="close-button" id="closeModal">&times;</span>
     </div>
     <div class="modal-body">
@@ -284,6 +309,6 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
     }
   });
 </script>
-  <script defer src="/script.js"></script>
+  <script defer src="../script.js"></script>
 </body>
 </html>

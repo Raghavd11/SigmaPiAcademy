@@ -4,22 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Data Science</title>
-  <link rel="stylesheet" href="/stylesheet.css" />
-  <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image" href="/pictures/SigmaPi Logo.png" />
+  <link rel="stylesheet" href="../../stylesheet.css" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image" href="../../pictures/SigmaPi Logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="../../script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<style>
+
+/* Dropdown menu */
+.dropdown-menu {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 135%;
+  left: -0.5rem;
+  background: #fff;
+  padding: 10px 0;
+  border-radius: 12px;
+  min-width: 150px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+</style>
+<style>
+    body{
+background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246));
+/* background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(120, 159, 251)); */
+    }
+    
+  </style>
 <body>
   <!-- Header -->
    <header class="main-header">
   <div class="header-container">
     <div class="header-left">
       <div class="logo-section">
-        <a href="index.html"><img src="/pictures/SigmaPi Logo.png" alt="Logo" class="logo"/></a>
+        <a href="../../index.html"><img src="../../pictures/SigmaPi Logo.png" alt="Logo" class="logo"/></a>
         <span class="logo-text">SigmaPi Academy</span>
       </div>
     </div>
@@ -27,17 +59,17 @@
     <div class="header-right">
       <nav class="nav-links">
         <ul>
-          <li class="nav-item"><a href="/index.html">Home</a></li>
+          <li class="nav-item"><a href="../../index.html">Home</a></li>
           <!-- CLASS XI Dropdown -->
           <li class="nav-item dropdown active">
             <a class="dropbtn">Class XI</a>
             <ul class="dropdown-menu">
               <div>
-                <li><a href="/html/coma1.html" class="base">COMA</a></li>
-                <li><a href="/html/cbst1.html" class="base">CBST</a></li>
-                <li><a href="/html/arti1.html" class="base">ARTI</a></li>
-                <li><a href="/html/coms1.html" class="base">COMS</a></li>
-                <li><a href="/html/dtsc1.html" class="base">DTSC</a></li>
+                <li><a href="../coma1.html" class="base">COMA</a></li>
+                <li><a href="../cbst1.html" class="base">CBST</a></li>
+                <li><a href="../arti1.html" class="base">ARTI</a></li>
+                <li><a href="../coms1.html" class="base">COMS</a></li>
+                <li><a href="../dtsc1.html" class="base">DTSC</a></li>
               </div>
             </ul>
           </li>
@@ -47,18 +79,17 @@
             <a class="dropbtn">Class XII</a>
             <ul class="dropdown-menu">
               <div>
-                <li><a href="/html/coma2.html" class="base">COMA</a></li>
-                <li><a href="/html/cbst2.html" class="base">CBST</a></li>
-                <li><a href="/html/arti2.html" class="base">ARTI</a></li>
-                <li><a href="/html/coms2.html" class="base">COMS</a></li>
-                <li><a href="/html/dtsc2.html" class="base">DTSC</a></li>
+                <li><a href="../coma2.html" class="base">COMA</a></li>
+                <li><a href="../cbst2.html" class="base">CBST</a></li>
+                <li><a href="../arti2.html" class="base">ARTI</a></li>
+                <li><a href="../coms2.html" class="base">COMS</a></li>
+                <li><a href="../dtsc2.html" class="base">DTSC</a></li>
               </div>
             </ul>
           </li>
-          <div class="hero-buttons">
-        <button class="register" id="openModal">Register</button>
-      </div>
-          <!-- <li class="nav-item"><a href="contact.html">Contact</a></li> -->
+        <li class="nav-item">
+          <button class="register" id="openModal">Register</button>
+        </li>
         </ul>
       </nav>
       <div class="hamburger" id="hamburger">☰</div>
@@ -68,31 +99,31 @@
     <div class="mobile-menu hidden" id="mobileMenu">
       <div class="mobile-menu-header">
         <div class="mobile-logo">
-          <img src="/pictures/SigmaPi Logo.png" alt="Logo" class="mobile-logo-img" />
+          <img src="../../pictures/SigmaPi Logo.png" alt="Logo" class="mobile-logo-img" />
           <span class="mobile-logo-text">SigmaPi Academy</span>
         </div>
         <button style="margin-right: 20px;" class="close-btn" id="closeMenu">close</button>
       </div>
       <ul class="mobile-nav">
-        <li class="nav-item"><a href="/index.html">Home</a></li>
+        <li class="nav-item"><a href="../../index.html">Home</a></li>
         <li class="nav-item">
           <span class="nav-link toggle-btn" data-target="submenuClass9">Class XI</span>
           <ul class="submenu hidden" id="submenuClass9">
-                <li><a href="/html/coma1.html" class="base">COMA</a></li>
-                <li><a href="/html/cbst1.html" class="base">CBST</a></li>
-                <li><a href="/html/arti1.html" class="base">ARTI</a></li>
-                <li><a href="/html/coms1.html" class="base">COMS</a></li>
-                <li><a href="/html/dtsc1.html" class="base">DTSC</a></li>
+                <li><a href="../coma1.html" class="base">COMA</a></li>
+                <li><a href="../cbst1.html" class="base">CBST</a></li>
+                <li><a href="../arti1.html" class="base">ARTI</a></li>
+                <li><a href="../coms1.html" class="base">COMS</a></li>
+                <li><a href="../dtsc1.html" class="base">DTSC</a></li>
           </ul>
         </li>
         <li class="nav-item">
           <span class="nav-link toggle-btn" data-target="submenuClass11">Class XII</span>
           <ul class="submenu hidden" id="submenuClass11">
-                <li><a href="/html/coma2.html" class="base">COMA</a></li>
-                <li><a href="/html/cbst2.html" class="base">CBST</a></li>
-                <li><a href="/html/arti2.html" class="base">ARTI</a></li>
-                <li><a href="/html/coms2.html" class="base">COMS</a></li>
-                <li><a href="/html/dtsc2.html" class="base">DTSC</a></li>
+                <li><a href="../coma2.html" class="base">COMA</a></li>
+                <li><a href="../cbst2.html" class="base">CBST</a></li>
+                <li><a href="../arti2.html" class="base">ARTI</a></li>
+                <li><a href="../coms2.html" class="base">COMS</a></li>
+                <li><a href="../dtsc2.html" class="base">DTSC</a></li>
           </ul>
         </li>
                   <li class="nav-item">
@@ -102,7 +133,6 @@
     </div>
   </div>
 </header>
-
 <br><br>
 <div style="text-align: center;">
   <span class="subject">DATA SCIENCE</span>
@@ -229,7 +259,7 @@
       <div class="footer-column">
         <div class="footer-link">
           <h2>Miscellaneous</h2>
-          <a style="margin-left: 60px;" href="./Misc/privacy.html">Privacy Policy</a>
+          <a style="margin-left: 60px;" href="../../Misc/privacy.html">Privacy Policy</a>
           <a style="margin-left: 60px;" href="#">Terms & Conditions</a>
           <a style="margin-left: 60px;" href="tel:+91-988-318-3128">Contact</a>
         </div>
@@ -267,7 +297,7 @@
   <div class="modal-overlay" id="modalOverlay"></div>
   <div class="modal-content">
     <div class="modal-header">
-      <img src="/pictures/SigmaPi Logo.png" width="30px" height="30px" alt="Logo">
+      <img src="../../pictures/SigmaPi Logo.png" width="30px" height="30px" alt="Logo">
       <span class="close-button" id="closeModal">&times;</span>
     </div>
     <div class="modal-body">
@@ -330,6 +360,6 @@
     }
   });
 </script>
-  <script defer src="/script.js"></script>
+  <script defer src="../../script.js"></script>
 </body>
 </html>

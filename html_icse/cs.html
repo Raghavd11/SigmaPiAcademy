@@ -4,14 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Computer Sceince</title>
-  <link rel="stylesheet" href="/stylesheet.css" />
-  <link rel="stylesheet" href="/styles.css" />
-  <link rel="stylesheet" href="/html/detailedfiles/style.css" />
-  <link rel="icon" type="image" href="/pictures/SigmaPi Logo.png" />
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../html/detailedfiles/style.css" />
+  <link rel="icon" type="image" href="../pictures/SigmaPi Logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<style>
+
+/* Dropdown menu */
+.dropdown-menu {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 135%;
+  left: -0.5rem;
+  background: #fff;
+  padding: 10px 0;
+  border-radius: 12px;
+  min-width: 150px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+</style>
 <style>
     body{
 background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246));
@@ -23,14 +47,14 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
   <div class="header-container">
     <div class="header-left">
       <div class="logo-section">
-        <a href="/index.html"><img src="/pictures/SigmaPi Logo.png" alt="Logo" class="logo"/></a>
+        <a href="../index.html"><img src="../pictures/SigmaPi Logo.png" alt="Logo" class="logo"/></a>
         <span class="logo-text">SigmaPi Academy</span>
       </div>
     </div>
     <div class="header-right">
       <nav class="nav-links">
         <ul>
-          <li class="nav-item"><a href="/index.html">Home</a></li>
+          <li class="nav-item"><a href="../index.html">Home</a></li>
           <li class="nav-item dropdown">
             <a class="dropbtn">Class IX-X</a>
             <ul class="dropdown-menu">
@@ -62,13 +86,13 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
     <div class="mobile-menu hidden" id="mobileMenu">
       <div class="mobile-menu-header">
         <div class="mobile-logo">
-          <img src="/pictures/SigmaPi Logo.png" alt="Logo" class="mobile-logo-img" />
+          <img src="../pictures/SigmaPi Logo.png" alt="Logo" class="mobile-logo-img" />
           <span class="mobile-logo-text">SigmaPi Academy</span>
         </div>
         <button style="margin-right: 20px;" class="close-btn" id="closeMenu">close</button>
       </div>
       <ul class="mobile-nav">
-        <li class="nav-item"><a href="/index.html">Home</a></li>
+        <li class="nav-item"><a href="../index.html">Home</a></li>
         <li class="nav-item">
           <span class="nav-link toggle-btn" data-target="submenuClass9">Class IX–X</span>
           <ul class="submenu hidden" id="submenuClass9">
@@ -358,7 +382,7 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
   <div class="modal-overlay" id="modalOverlay"></div>
   <div class="modal-content">
     <div class="modal-header">
-      <img src="/pictures/SigmaPi Logo.png" width="30px" height="30px" alt="Logo">
+      <img src="../pictures/SigmaPi Logo.png" width="30px" height="30px" alt="Logo">
       <span class="close-button" id="closeModal">&times;</span>
     </div>
     <div class="modal-body">
@@ -424,6 +448,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 </script>
-<script defer src="/script.js"></script>
+<script defer src="../script.js"></script>
 </body>
 </html>
