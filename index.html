@@ -11,6 +11,26 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
 </head>
 <style>
+
+  .video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 80%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+}
+
   .about-text {
   max-width: 800px;
   margin: 0 auto;
@@ -70,6 +90,11 @@
   .about-text h3 {
     font-size: 20px;
   }
+
+    .video-wrapper {
+  width: 75%;
+  padding-bottom: 50%;
+}
 }
 
 /* === Mobile (max-width: 480px) === */
@@ -93,6 +118,10 @@
   .about-text h3 {
     font-size: 18px;
   }
+    .video-wrapper {
+  width: 75%;
+  padding-bottom: 50%;
+}
 }
 
 </style>
@@ -229,14 +258,18 @@
     </div>
 
     <div class="about-video">
-  <iframe 
-    style="width: 100%; height: 50vh; border: none; border-radius: 25px;" 
-    src="https://www.youtube.com/embed/j211nWkN3Fk?si=l0-4aQ7eZbwxkP_J" 
-    title="YouTube video player" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen>
-  </iframe>
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/j211nWkN3Fk?rel=0&modestbranding=1&showinfo=0&controls=1" 
+      title="Embedded video" 
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
 </div>
+
+
 
   </div>
   <br><br>
