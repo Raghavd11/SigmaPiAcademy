@@ -168,6 +168,9 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
             </li>
             <li class="nav-item"><a href="../testimonials.html">Testimonials</a></li>
             <li class="nav-item"><a href="../contact.html">Contact</a></li>
+            <li class="nav-item">
+               <button class="register" id="openModal">Register</button>
+            </li>
           </ul>
         </nav>
         <div class="hamburger" id="hamburger">&#9776;</div> 
@@ -180,7 +183,7 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
         <img src="../pictures/SigmaPi Logo.png" alt="Logo" class="mobile-logo-img" />
         <span class="mobile-logo-text">SigmaPi Academy</span>
       </div>
-      <button style="margin-right: 20px;" style="font-size: 20px;" class="close-btn" id="closeMenu">close</button>
+      <button style="font-size: 20px;" class="close-btn" id="closeMenu">close</button>
     </div>
 
     <ul class="mobile-nav">
@@ -196,6 +199,8 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
 
       <li class="nav-item"><a href="../testimonials.html">Testimonials</a></li>
       <li class="nav-item"><a href="../contact.html">Contact</a></li>
+      <li class="nav-item">
+      <button style="margin-left: 15px;" class="register" id="openModalMobile">Register</button></li>
     </ul>
   </div>
 </div>
@@ -374,5 +379,22 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgb(192, 208, 246
       <p>&copy; <a href="#">SigmaPi Academy</a> All Rights Reserved</p>
     </div>
   </footer>
+
+   <div class="custom-modal" id="registerModal">
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <img src="../pictures/SigmaPi Logo.png" width="30px" height="30px" alt="Logo">
+      <span class="close-button" id="closeModal">&times;</span>
+    </div>
+    <div class="modal-body">
+      <iframe 
+        style="width: 100%; height: 70vh; border: none;"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSe_km_Qpf4Vh0bY7QELvZ0QbQHFLHU4Y3b3SQg3X26aIQXtNw/viewform?embedded=true">
+        Loading…
+      </iframe>
+    </div>
+  </div>
+</div>
   </body>
 </html>
